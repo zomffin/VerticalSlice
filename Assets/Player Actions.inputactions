@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "Player Actions",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "ebb21423-7954-43b6-9787-602f37135e03",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "251bab1d-8eef-4d35-b7b8-28be3d99199a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "800bf9fc-3eb3-4d0b-9417-b22b4070eb07",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19d8d1a0-8fdb-4921-9cf7-d2f452eda033",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
