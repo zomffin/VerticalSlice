@@ -9,7 +9,8 @@ enum PlayerState
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private LayerMask _layerMask;
+    [SerializeField] private LayerMask _moveMask;
+    [SerializeField] private LayerMask _interactMask; 
     [SerializeField] private Camera _camera; 
     
     private PlayerState _playerState;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         _playerState = PlayerState.Moving;
+        Cursor.visible = false; 
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
@@ -29,6 +32,38 @@ public class Player : MonoBehaviour
 
         RunState(); 
         
+        
+        
+    }
+
+    void OnClick()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _interactMask))
+        {
+            switch (hit.collider.gameObject.tag)
+            {
+                case "Type":
+                    if (_playerState == PlayerState.Typing)
+                    {
+                        _playerState = PlayerState.Moving;
+                    }
+                    else
+                    {
+                        _playerState = PlayerState.Typing;
+                    }
+                    break;
+                default:
+                    _playerState = PlayerState.Moving;
+                    Debug.Log("interactable with incorrect tag");
+                    break; 
+            }
+        }
+        else
+        {
+            Debug.Log("no interactable here"); 
+        }
+
     }
 
     private void UpdateState()
@@ -55,7 +90,7 @@ public class Player : MonoBehaviour
     private void movingState()
     {
         RaycastHit hit;
-        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _layerMask))
+        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _moveMask))
         {
             this.transform.position = hit.point;
             //this.transform.position = new Vector3(transform.position.x, transform.position.z, transform.position.y + 1); 
