@@ -131,9 +131,9 @@ GameObject:
   - component: {fileID: 105429485}
   - component: {fileID: 105429484}
   - component: {fileID: 105429483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Typing
-  m_TagString: Untagged
+  m_TagString: Type
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,9 +394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2ead11620eb2b4eb2a58eefb3d8b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layerMask:
+  _moveMask:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 59
+  _interactMask:
+    serializedVersion: 2
+    m_Bits: 8
   _camera: {fileID: 330585545}
 --- !u!4 &409554384
 Transform:

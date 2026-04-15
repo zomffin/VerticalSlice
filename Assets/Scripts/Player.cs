@@ -93,9 +93,6 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _moveMask))
         {
             this.transform.position = hit.point;
-            //this.transform.position = new Vector3(transform.position.x, transform.position.z, transform.position.y + 1); 
-
-            //Debug.Log(hit.point);
         }
         else
         {
