@@ -54,14 +54,14 @@ public class Player : MonoBehaviour
                     {
                         _playerState = PlayerState.Moving;
                         typingEvent?.Invoke(false);
-                        CustomEvent.Trigger(_gameManager, "isTyping", false);
+                        CustomEvent.Trigger(_gameManager, "typing", false);
                         Debug.Log("went from typing to moving");
                     }
                     else
                     {
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
-                        CustomEvent.Trigger(_gameManager, "isTyping", true);
+                        CustomEvent.Trigger(_gameManager, "typing", true);
                         Debug.Log("went from moving to typing");
                     }
                     break;

@@ -10,7 +10,7 @@ public class Locator : MonoBehaviour
     [SerializeField] public static GameObject gameManager;
     
     
-    void OnAwake()
+    void Awake()
     {
         if (_instance != null && _instance != this)
         {
