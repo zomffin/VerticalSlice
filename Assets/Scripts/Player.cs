@@ -15,10 +15,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Camera _camera; 
     
     private PlayerState _playerState;
-    private float _deltaMove;
-    private Vector3 _mousePosition; 
+    private float _deltaMove; // for move towards which isnt being used (yet)
+    private Vector3 _mousePosition;
+
+    public delegate void StartTyping();
+    public event StartTyping typingEvent;
         
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // player starts moving, with the cursor confined to the window
     void Start()
     {
         _playerState = PlayerState.Moving;
@@ -26,17 +29,15 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateState();
 
         RunState(); 
         
-        
-        
     }
-
+    
+    // click to interact with objects 
     void OnClick()
     {
         RaycastHit hit;

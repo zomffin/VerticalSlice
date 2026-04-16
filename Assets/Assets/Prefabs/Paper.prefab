@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2518850926418432216}
   - component: {fileID: 8709437423952726014}
   - component: {fileID: 5534544866476174634}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -189,9 +189,9 @@ GameObject:
   - component: {fileID: 459343327142081949}
   - component: {fileID: 8392918863553739597}
   - component: {fileID: 5932317424313171136}
-  m_Layer: 0
-  m_Name: TaskPaper
-  m_TagString: Untagged
+  m_Layer: 3
+  m_Name: Paper
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
