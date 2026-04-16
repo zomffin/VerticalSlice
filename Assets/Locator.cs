@@ -5,10 +5,7 @@ public class Locator : MonoBehaviour
     private static Locator _instance;
     public static Locator instance {get {return _instance;}}
 
-    [SerializeField] private Player _player
-    {
-        get { return _player; }
-    }
+    [SerializeField] public Player _player;
     
     
     

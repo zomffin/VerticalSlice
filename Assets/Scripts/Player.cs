@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private float _deltaMove; // for move towards which isnt being used (yet)
     private Vector3 _mousePosition;
 
-    public delegate void StartTyping();
+    public delegate void StartTyping(bool isTyping);
     public event StartTyping typingEvent;
         
     // player starts moving, with the cursor confined to the window
@@ -49,12 +49,15 @@ public class Player : MonoBehaviour
                     if (_playerState == PlayerState.Typing)
                     {
                         _playerState = PlayerState.Moving;
+                        typingEvent?.Invoke(false);
                     }
                     else
                     {
                         _playerState = PlayerState.Typing;
+                        typingEvent?.Invoke(true);
                     }
                     break;
+                
                 case "PickUp":
                     if (_playerState == PlayerState.Carrying)
                     {
