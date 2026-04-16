@@ -4,6 +4,7 @@ using UnityEngine;
 enum PlayerState
 {
     Moving, 
+    Carrying,
     Typing
 }
 
@@ -53,6 +54,17 @@ public class Player : MonoBehaviour
                         _playerState = PlayerState.Typing;
                     }
                     break;
+                case "PickUp":
+                    if (_playerState == PlayerState.Carrying)
+                    {
+                        _playerState = PlayerState.Moving;
+                    }
+                    else
+                    {
+                        _playerState = PlayerState.Carrying;
+                    }
+
+                    break;
                 default:
                     _playerState = PlayerState.Moving;
                     Debug.Log("interactable with incorrect tag");
@@ -79,7 +91,7 @@ public class Player : MonoBehaviour
                 movingState();
                 break;
             case PlayerState.Typing:
-                
+                carryingState(); 
                 break;
             default:
                 Debug.Log("error in run state");
@@ -104,5 +116,18 @@ public class Player : MonoBehaviour
     private void typingState()
     {
         
+    }
+
+    private void carryingState()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _moveMask))
+        {
+            this.transform.position = hit.point;
+        }
+        else
+        {
+            
+        }
     }
 }
