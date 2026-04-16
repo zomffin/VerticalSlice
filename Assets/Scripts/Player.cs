@@ -1,4 +1,5 @@
 using NUnit.Framework.Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 
 enum PlayerState
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     private PlayerState _playerState;
     private float _deltaMove; // for move towards which isnt being used (yet)
     private Vector3 _mousePosition;
+    private GameObject _gameManager; 
 
     public delegate void StartTyping(bool isTyping);
     public event StartTyping typingEvent;
@@ -25,8 +27,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         _playerState = PlayerState.Moving;
-        Cursor.visible = false; 
+        //Cursor.visible = false; 
         Cursor.lockState = CursorLockMode.Confined;
+
+        _gameManager = Locator.GetGameManager(); 
     }
 
     void Update()
@@ -50,14 +54,17 @@ public class Player : MonoBehaviour
                     {
                         _playerState = PlayerState.Moving;
                         typingEvent?.Invoke(false);
+                        CustomEvent.Trigger(_gameManager, "isTyping", false);
+                        Debug.Log("went from typing to moving");
                     }
                     else
                     {
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
+                        CustomEvent.Trigger(_gameManager, "isTyping", true);
+                        Debug.Log("went from moving to typing");
                     }
                     break;
-                
                 case "PickUp":
                     if (_playerState == PlayerState.Carrying)
                     {
@@ -67,7 +74,6 @@ public class Player : MonoBehaviour
                     {
                         _playerState = PlayerState.Carrying;
                     }
-
                     break;
                 default:
                     _playerState = PlayerState.Moving;
@@ -84,7 +90,7 @@ public class Player : MonoBehaviour
 
     private void UpdateState()
     {
-        
+        return;
     }
 
     private void RunState()
@@ -95,7 +101,10 @@ public class Player : MonoBehaviour
                 movingState();
                 break;
             case PlayerState.Typing:
-                carryingState(); 
+                typingState(); 
+                break;
+            case PlayerState.Carrying:
+                carryingState();
                 break;
             default:
                 Debug.Log("error in run state");

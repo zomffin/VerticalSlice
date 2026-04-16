@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Locator : MonoBehaviour
@@ -5,8 +6,8 @@ public class Locator : MonoBehaviour
     private static Locator _instance;
     public static Locator instance {get {return _instance;}}
 
-    [SerializeField] public Player _player;
-    
+    [SerializeField] public static Player _player;
+    [SerializeField] public static GameObject gameManager;
     
     
     void OnAwake()
@@ -19,9 +20,21 @@ public class Locator : MonoBehaviour
         {
             _instance = this; 
         }
-        
-        
+
+        gameManager = this.gameObject; 
     }
+
+    public static Player GetPlayer()
+    {
+        return _player; 
+    }
+
+    public static GameObject GetGameManager()
+    {
+        return gameManager;
+    }
+
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
