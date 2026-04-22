@@ -14,5 +14,14 @@ public class Task : ScriptableObject
     public TaskType taskType; 
     public int difficulty;
     [TextArea(15, 20)] 
-    public string rawText; 
+    public string rawText;
+
+    public int charCount;
+
+    private void OnValidate()
+    {
+        charCount = rawText.Length;
+
+        difficulty = charCount / 100 + 1; 
+    }
 }

@@ -2,7 +2,6 @@ using System;
 using System.Transactions;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class Typing : MonoBehaviour

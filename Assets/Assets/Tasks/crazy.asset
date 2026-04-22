@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
   m_Name: crazy
   m_EditorClassIdentifier: 
-  taskName: 
+  taskName: rats
   taskType: 0
   difficulty: 0
   rawText: crazy? I was crazy once. they put me in a room. a rubber room. a rubber
