@@ -59,14 +59,17 @@ public class Typing : MonoBehaviour
                     {
                         if (_currentPassage[_currentPassage.Length - 1] == '>')
                         {
-                            CheckForCode();
+                            DeleteCode(false);
+                            DeleteCode(true);
+                            _paper.text = _currentPassage; 
                         }
                         else
                         {
                             _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
                             _paper.text = _currentPassage; 
                         }
-                        
+
+                        _place--; 
                         _currDelete--; 
                     }
                 }
@@ -81,11 +84,13 @@ public class Typing : MonoBehaviour
                     {
                         _currentPassage += c; 
                         _paper.text = _currentPassage;
+                        _place++; 
                     }
                     else
                     {
                         _currentPassage += "<color=red>" + c + "</color>";
                         _paper.text = _currentPassage;
+                        _place++; 
                     }
                     
                     _currInk--;
@@ -119,22 +124,21 @@ public class Typing : MonoBehaviour
         _paper.text = ""; 
     }
 
-    private void CheckForCode()
+    private void DeleteCode(bool second)
     {
         int index = _currentPassage.LastIndexOf('<');
         if (index == 0)
         {
             _currentPassage = ""; 
         }
-        else if (_currentPassage[index - 1] != '>')
+        else if (_currentPassage[index - 1] != '>' && !second)
         {
             _currentPassage = _currentPassage.Substring(0, index - 1); 
         }
         else
         {
-            _currentPassage = _currentPassage.Substring(0, index - 1); 
+            _currentPassage = _currentPassage.Substring(0, index); 
         }
-        _paper.text = _currentPassage; 
     }
 
     //everyhing in game dev is hard and im crying 
