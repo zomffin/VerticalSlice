@@ -14,7 +14,7 @@ public class Typing : MonoBehaviour
     [Header("Resource stuff")]
     [SerializeField] private int _startingInk;
     [SerializeField] private int _startingDelete;
-    [SerialzieField] private int _startingPaper; 
+    [SerializeField] private int _startingPaper; 
     
     [Header("UI stuff")]
     [SerializeField] private TextMeshProUGUI inkUI;
