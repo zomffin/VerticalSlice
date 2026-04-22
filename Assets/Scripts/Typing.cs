@@ -53,7 +53,6 @@ public class Typing : MonoBehaviour
                         _paper.text = _currentPassage;
                         
                         _currDelete--; 
-                        deleteUI.text = "Whiteout: " + _currDelete;
                     }
                 }
                 else if ((c == '\n') || (c == '\r')) // enter/return
@@ -62,13 +61,23 @@ public class Typing : MonoBehaviour
                 }
                 else if (_currInk > 0)
                 {
-                    _currentPassage += c; 
-                    _paper.text = _currentPassage;
 
+                    if (_taskPassage[_place] == c)
+                    {
+                        _currentPassage += c; 
+                        _paper.text = _currentPassage;
+                    }
+                    else
+                    {
+                        _currentPassage += "<color=red>" + c + "</color>";
+                        _paper.text = _currentPassage;
+                    }
+                    
                     _currInk--;
-                    inkUI.text = "Ink: " + _currInk; 
                 }
-            }    
+            }  
+            
+            SetUI();
         }
         
     }
@@ -77,6 +86,12 @@ public class Typing : MonoBehaviour
     {
         _taskPassage = task;
         Debug.Log("task was set to:" + _taskPassage);
+    }
+
+    private void SetUI()
+    {
+        inkUI.text = "Ink: " + _currInk; 
+        deleteUI.text = "Whiteout: " + _currDelete;
     }
 
     //everyhing in game dev is hard and im crying 
