@@ -10,7 +10,7 @@ public class Typing : MonoBehaviour
     [SerializeField] private Transform _position; 
     
     private string _taskPassage; 
-    private string _currentPassage;
+    private string _currentPassage = "";
 
     private int _place;
 
@@ -34,6 +34,7 @@ public class Typing : MonoBehaviour
                 if (_currentPassage.Length != 0)
                 {
                     _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
+                    _paper.text = _currentPassage;
                 }
             }
             else if ((c == '\n') || (c == '\r')) // enter/return
@@ -42,7 +43,8 @@ public class Typing : MonoBehaviour
             }
             else
             {
-                _paper.text += c;
+                _currentPassage += c; 
+                _paper.text = _currentPassage;
                 Debug.Log(_currentPassage);
             }
         }    
