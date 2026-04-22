@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
   m_Name: TypingTask
   m_EditorClassIdentifier: 
-  _taskType: 0
-  _difficulty: 0
-  text: blah lblah blah blah blah blah
+  taskName: 
+  taskType: 0
+  difficulty: 0
+  rawText: 
+  displayText: 

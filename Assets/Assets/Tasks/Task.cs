@@ -9,6 +9,9 @@ public enum TaskType
 
 public class Task : ScriptableObject
 {
-    public TaskType _taskType; 
-    public int _difficulty; 
+    public string taskName; 
+    public TaskType taskType; 
+    public int difficulty;
+    [TextArea(15, 20)] 
+    public string rawText; 
 }

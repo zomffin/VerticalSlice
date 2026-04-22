@@ -4,6 +4,6 @@ using UnityEngine;
 public class TypingTask : Task
 {
     [TextArea(15,20)]
-    public string text; 
+    public string displayText; 
 
 }
