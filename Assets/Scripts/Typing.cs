@@ -14,6 +14,7 @@ public class Typing : MonoBehaviour
     [Header("Resource stuff")]
     [SerializeField] private int _startingInk;
     [SerializeField] private int _startingDelete;
+    [SerialzieField] private int _startingPaper; 
     
     [Header("UI stuff")]
     [SerializeField] private TextMeshProUGUI inkUI;
@@ -21,6 +22,7 @@ public class Typing : MonoBehaviour
 
     private int _currInk; 
     private int _currDelete;
+    private int _currPaper; 
     
     private string _taskPassage;
     [SerializeField] private string _currentPassage = "";
@@ -47,6 +49,7 @@ public class Typing : MonoBehaviour
         {
             EjectPaper(); 
             _player.FinishTyping();
+            --_currPaper; 
         }
         
         if (Input.inputString.Length > 0)
@@ -110,6 +113,7 @@ public class Typing : MonoBehaviour
         _place = 0;
         Debug.Log("task was set to:" + _taskPassage);
     }
+    
 
     private void SetUI()
     {
@@ -117,11 +121,25 @@ public class Typing : MonoBehaviour
         deleteUI.text = "Whiteout: " + _currDelete;
     }
 
+    public void AddInk(int num)
+    {
+        _currInk += num;
+    }
+
+    public void AddWhiteOut(int num)
+    {
+        _currDelete += num;
+    }
+
+    public void AddPaper(int num)
+    {
+        _currPaper += num;
+    }
+
     private void EjectPaper()
     {
         CustomEvent.Trigger(_gameManager, "finishTask", _currentPassage, _taskPassage);
         _currentPassage = "";
-        //_taskPassage = "";
         _paper.text = ""; 
     }
 
@@ -141,6 +159,7 @@ public class Typing : MonoBehaviour
             _currentPassage = _currentPassage.Substring(0, index); 
         }
     }
+    
 
     //everyhing in game dev is hard and im crying 
     

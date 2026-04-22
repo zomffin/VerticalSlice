@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19f19b09160caa489cb2aefef9f2d51, type: 3}
+  m_Name: Task
+  m_EditorClassIdentifier: 
+  taskName: primordial molecule
+  taskType: 0
+  difficulty: 0
+  rawText: In de beninging, da world was, like, not there. But then, suddenly, it
+    was. And that was crazy. Crazy? I was crazy once, but that came later in the
+    timeline. At this moment, I was molecules. Just moving thu space and stuff. Anyway,
+    Things were pretty chill. A bunch of us molecules felt like making a big sphere,
+    so we did. Then some of the molecules were like, "wouldn't be neat if we were,
+    like, alive?" n' some of the other guys were like, "yea, I guess." So we just
+    be chillin' in the primordial soup for however long we were there, but then some
+    other guy was like, "I'm outta here." Luckily, the sphere, which called Earth
+    or something, seemed to cool down a bit, and apparently there was an ozone and
+    everything. There might've been food up there, according to him, so I figured
+    I might as well go check it out. So now I'm just chillin' on the beach, think
+    I might get legs later, idk.
