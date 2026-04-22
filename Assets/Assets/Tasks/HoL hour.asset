@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
+  m_Name: HoL hour
+  m_EditorClassIdentifier: 
+  taskName: Kill the Hour
+  taskType: 1
+  difficulty: 0
+  rawText: ' Who has never killed an hour? Not casually or without thought, but carefully:
+    a premeditated murder of minutes. The violence comes from a combination of giving
+    up, not caring, and a resignation that getting past it is all you can hope to
+    accomplish. So you kill the hour. You do not work, you do not read, you do not
+    daydream. If you sleep it is not because you need to sleep. And when at last
+    it is over, there is no evidence: no weapon, no blood, and no body. The only
+    clue might be the shadows beneath your eyes or a terribly thin line near the
+    corner of your mouth indicating something has been suffered, that in the privacy
+    of your life you have lost something and the loss is too empty to share. '
+  displayText: " \tWho has never killed an hour? Not casually or without thought,
+    but carefully: a premeditated murder of minutes. The violence comes from a combination
+    of giving up, not caring, and a resignation that getting past it is all you can
+    hope to accomplish. So you kill the hour. You do not work, you do not read, you
+    do not daydream. If you sleep it is not because you need to sleep. \n\tAnd when
+    at last it is over, there is no evidence: no weapon, no blood, and no body. The
+    only clue might be the shadows beneath your eyes or a terribly thin line near
+    the corner of your mouth indicating something has been suffered, that in the
+    privacy of your life you have lost something and the loss is too empty to share. "

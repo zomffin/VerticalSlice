@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public enum TaskType
 {
+    Default,
     Typing
 }
 
