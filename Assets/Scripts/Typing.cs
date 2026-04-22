@@ -6,8 +6,20 @@ using UnityEngine;
 
 public class Typing : MonoBehaviour
 {
+    [Header("Paper stuff")]
     [SerializeField] private TextMeshPro _paper;
-    [SerializeField] private Transform _position; 
+    [SerializeField] private Transform _position;
+    
+    [Header("Resource stuff")]
+    [SerializeField] private int _startingInk;
+    [SerializeField] private int _startingDelete;
+    
+    [Header("UI stuff")]
+    [SerializeField] private TextMeshProUGUI inkUI;
+    [SerializeField] private TextMeshProUGUI deleteUI;
+
+    private int _currInk; 
+    private int _currDelete;
     
     private string _taskPassage; 
     private string _currentPassage = "";
@@ -20,32 +32,45 @@ public class Typing : MonoBehaviour
     void Start()
     {
         _player = Locator.Instance.Player; 
+        
+        _currInk = _startingInk;
+        _currDelete = _startingDelete;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        foreach (char c in Input.inputString)
+        if (Input.inputString.Length > 0)
         {
-            if (c == '\b') // has backspace/delete been pressed?
+            
+            foreach (char c in Input.inputString)
             {
-                if (_currentPassage.Length != 0)
+                if (c == '\b') // has backspace/delete been pressed?
                 {
-                    _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
-                    _paper.text = _currentPassage;
+                    if (_currentPassage.Length != 0 && _currDelete > 0)
+                    {
+                        _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
+                        _paper.text = _currentPassage;
+                        
+                        _currDelete--; 
+                        deleteUI.text = "Whiteout: " + _currDelete;
+                    }
                 }
-            }
-            else if ((c == '\n') || (c == '\r')) // enter/return
-            {
-                Debug.Log("player hit enter");
-            }
-            else
-            {
-                _currentPassage += c; 
-                _paper.text = _currentPassage;
-            }
-        }    
+                else if ((c == '\n') || (c == '\r')) // enter/return
+                {
+                    Debug.Log("player hit enter");
+                }
+                else if (_currInk > 0)
+                {
+                    _currentPassage += c; 
+                    _paper.text = _currentPassage;
+
+                    _currInk--;
+                    inkUI.text = "Ink: " + _currInk; 
+                }
+            }    
+        }
+        
     }
     
     public void SetTask(string task)
