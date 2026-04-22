@@ -1,6 +1,7 @@
 using System;
 using System.Transactions;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -27,13 +28,13 @@ public class Typing : MonoBehaviour
     private int _place;
 
     private Player _player;
-    private GameObject _manager; 
+    private GameObject _gameManager; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _player = Locator.Instance.Player;
-        _manager = Locator.Instance.gameObject; 
+        _gameManager = Locator.Instance.gameObject; 
         
         _currInk = _startingInk;
         _currDelete = _startingDelete;
@@ -58,16 +59,7 @@ public class Typing : MonoBehaviour
                     {
                         if (_currentPassage[_currentPassage.Length - 1] == '>')
                         {
-                            int index = _currentPassage.LastIndexOf('<');
-                            if (index == 0)
-                            {
-                                _currentPassage = ""; 
-                            }
-                            else
-                            {
-                                _currentPassage = _currentPassage.Substring(0, index - 1); 
-                            }
-                            _paper.text = _currentPassage; 
+                            CheckForCode();
                         }
                         else
                         {
@@ -120,7 +112,29 @@ public class Typing : MonoBehaviour
 
     private void EjectPaper()
     {
-        
+        CustomEvent.Trigger(_gameManager, "finishTask", _currentPassage, _taskPassage);
+        _currentPassage = "";
+        _taskPassage = "";
+        _place = 0;
+        _paper.text = ""; 
+    }
+
+    private void CheckForCode()
+    {
+        int index = _currentPassage.LastIndexOf('<');
+        if (index == 0)
+        {
+            _currentPassage = ""; 
+        }
+        else if (_currentPassage[index - 1] != '>')
+        {
+            _currentPassage = _currentPassage.Substring(0, index - 1); 
+        }
+        else
+        {
+            _currentPassage = _currentPassage.Substring(0, index - 1); 
+        }
+        _paper.text = _currentPassage; 
     }
 
     //everyhing in game dev is hard and im crying 
