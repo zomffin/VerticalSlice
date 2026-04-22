@@ -457,9 +457,10 @@ MonoBehaviour:
   _paper: {fileID: 780000135}
   _position: {fileID: 1009997903}
   _startingInk: 100
-  _startingDelete: 10
+  _startingDelete: 20
   inkUI: {fileID: 1365163706}
   deleteUI: {fileID: 407385355}
+  _currentPassage: 
 --- !u!1 &105499503
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +473,6 @@ GameObject:
   - component: {fileID: 105499507}
   - component: {fileID: 105499506}
   - component: {fileID: 105499508}
-  - component: {fileID: 105499509}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -558,24 +558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a3a26daa53e7c439fcc2e98156f97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &105499509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105499503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a021f840bab00449af4017b411627aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _paper: {fileID: 0}
-  _position: {fileID: 0}
-  _startingInk: 0
-  _startingDelete: 0
-  inkUI: {fileID: 0}
-  deleteUI: {fileID: 0}
 --- !u!1 &269922751
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,8 +21,8 @@ public class Typing : MonoBehaviour
     private int _currInk; 
     private int _currDelete;
     
-    private string _taskPassage; 
-    private string _currentPassage = "";
+    private string _taskPassage;
+    [SerializeField] private string _currentPassage = "";
 
     private int _place;
 
@@ -49,8 +49,24 @@ public class Typing : MonoBehaviour
                 {
                     if (_currentPassage.Length != 0 && _currDelete > 0)
                     {
-                        _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
-                        _paper.text = _currentPassage;
+                        if (_currentPassage[_currentPassage.Length - 1] == '>')
+                        {
+                            int index = _currentPassage.LastIndexOf('<');
+                            if (index == 0)
+                            {
+                                _currentPassage = ""; 
+                            }
+                            else
+                            {
+                                _currentPassage = _currentPassage.Substring(0, index - 1); 
+                            }
+                            _paper.text = _currentPassage; 
+                        }
+                        else
+                        {
+                            _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
+                            _paper.text = _currentPassage; 
+                        }
                         
                         _currDelete--; 
                     }
