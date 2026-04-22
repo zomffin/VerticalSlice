@@ -143,8 +143,8 @@ public class Player : MonoBehaviour
 
     private void typingState()
     {
-        string typed = Input.inputString;
-        Debug.Log(typed); 
+        /*string typed = Input.inputString;
+        Debug.Log(typed); */
     }
 
     private void carryingState()

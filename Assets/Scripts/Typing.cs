@@ -20,7 +20,6 @@ public class Typing : MonoBehaviour
     void Start()
     {
         _player = Locator.Instance.Player; 
-        Debug.Log("player is:" + _player.name);
     }
 
     // Update is called once per frame
@@ -45,7 +44,6 @@ public class Typing : MonoBehaviour
             {
                 _currentPassage += c; 
                 _paper.text = _currentPassage;
-                Debug.Log(_currentPassage);
             }
         }    
     }
@@ -53,6 +51,7 @@ public class Typing : MonoBehaviour
     public void SetTask(string task)
     {
         _taskPassage = task;
+        Debug.Log("task was set to:" + _taskPassage);
     }
 
     //everyhing in game dev is hard and im crying 
