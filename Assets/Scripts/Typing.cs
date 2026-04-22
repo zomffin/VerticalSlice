@@ -46,6 +46,7 @@ public class Typing : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             EjectPaper(); 
+            _player.FinishTyping();
         }
         
         if (Input.inputString.Length > 0)
@@ -80,7 +81,7 @@ public class Typing : MonoBehaviour
                 else if (_currInk > 0)
                 {
 
-                    if (_taskPassage[_place] == c)
+                    if (_place < _taskPassage.Length && _taskPassage[_place] == c)
                     {
                         _currentPassage += c; 
                         _paper.text = _currentPassage;
@@ -106,6 +107,7 @@ public class Typing : MonoBehaviour
     public void SetTask(string task)
     {
         _taskPassage = task;
+        _place = 0;
         Debug.Log("task was set to:" + _taskPassage);
     }
 
@@ -119,8 +121,7 @@ public class Typing : MonoBehaviour
     {
         CustomEvent.Trigger(_gameManager, "finishTask", _currentPassage, _taskPassage);
         _currentPassage = "";
-        _taskPassage = "";
-        _place = 0;
+        //_taskPassage = "";
         _paper.text = ""; 
     }
 

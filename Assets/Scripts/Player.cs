@@ -91,6 +91,14 @@ public class Player : MonoBehaviour
 
     }
 
+    public void FinishTyping()
+    {
+        _playerState = PlayerState.Moving;
+        typingEvent?.Invoke(false);
+        CustomEvent.Trigger(_gameManager, "typing", false);
+        Debug.Log("went from typing to moving");
+    }
+
     public void TakeItem()
     {
         if (_playerState == PlayerState.Carrying)
