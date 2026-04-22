@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
     private PlayerState _playerState;
     private float _deltaMove; // for move towards which isnt being used (yet)
     private Vector3 _mousePosition;
-    private GameObject _gameManager; 
+    private GameObject _gameManager;
+
+    private Transform _heldItem; 
 
     public delegate void StartTyping(bool isTyping);
     public event StartTyping typingEvent;
@@ -30,12 +32,12 @@ public class Player : MonoBehaviour
         //Cursor.visible = false; 
         Cursor.lockState = CursorLockMode.Confined;
 
-        _gameManager = Locator.GetGameManager(); 
+        _gameManager = Locator.Instance.gameObject; 
     }
 
     void Update()
     {
-        UpdateState();
+        //UpdateState(); currently does nothing
 
         RunState(); 
         
@@ -73,6 +75,7 @@ public class Player : MonoBehaviour
                     else
                     {
                         _playerState = PlayerState.Carrying;
+                        _heldItem = hit.collider.gameObject.transform; 
                     }
                     break;
                 default:
@@ -86,6 +89,19 @@ public class Player : MonoBehaviour
             Debug.Log("no interactable here"); 
         }
 
+    }
+
+    public void TakeItem()
+    {
+        if (_playerState == PlayerState.Carrying)
+        {
+            _playerState = PlayerState.Moving;
+            _heldItem = null;
+        }
+        else
+        {
+            Debug.Log("Take item triggered when player isnt carrying");
+        }
     }
 
     private void UpdateState()
@@ -125,7 +141,6 @@ public class Player : MonoBehaviour
         }
     }
 
-
     private void typingState()
     {
         string typed = Input.inputString;
@@ -138,6 +153,7 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _moveMask))
         {
             this.transform.position = hit.point;
+            _heldItem.position = new Vector3(hit.point.x, hit.point.y + 0.25f, hit.point.z);
         }
         else
         {

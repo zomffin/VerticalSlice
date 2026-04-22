@@ -1,37 +1,26 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Locator : MonoBehaviour
 {
-    private static Locator _instance;
-    public static Locator instance {get {return _instance;}}
-
-    [SerializeField] public static Player _player;
-    [SerializeField] public static GameObject gameManager;
+    public static Locator Instance { get; private set; }
+    public Player Player { get; private set; }
     
     
     void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject); 
-        }
-        else
-        {
-            _instance = this; 
+            Destroy(this.gameObject);
+            return;
         }
 
-        gameManager = this.gameObject; 
-    }
+        Instance = this; 
+        
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        Player = playerObj.GetComponent<Player>();
 
-    public static Player GetPlayer()
-    {
-        return _player; 
-    }
-
-    public static GameObject GetGameManager()
-    {
-        return gameManager;
     }
 
     
