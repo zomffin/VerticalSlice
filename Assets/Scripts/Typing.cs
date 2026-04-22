@@ -26,12 +26,14 @@ public class Typing : MonoBehaviour
 
     private int _place;
 
-    private Player _player; 
+    private Player _player;
+    private GameObject _manager; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _player = Locator.Instance.Player; 
+        _player = Locator.Instance.Player;
+        _manager = Locator.Instance.gameObject; 
         
         _currInk = _startingInk;
         _currDelete = _startingDelete;
@@ -40,6 +42,11 @@ public class Typing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            EjectPaper(); 
+        }
+        
         if (Input.inputString.Length > 0)
         {
             
@@ -96,6 +103,7 @@ public class Typing : MonoBehaviour
             SetUI();
         }
         
+        
     }
     
     public void SetTask(string task)
@@ -108,6 +116,11 @@ public class Typing : MonoBehaviour
     {
         inkUI.text = "Ink: " + _currInk; 
         deleteUI.text = "Whiteout: " + _currDelete;
+    }
+
+    private void EjectPaper()
+    {
+        
     }
 
     //everyhing in game dev is hard and im crying 

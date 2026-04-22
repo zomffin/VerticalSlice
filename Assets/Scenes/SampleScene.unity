@@ -457,7 +457,7 @@ MonoBehaviour:
   _paper: {fileID: 780000135}
   _position: {fileID: 1009997903}
   _startingInk: 100
-  _startingDelete: 20
+  _startingDelete: 100
   inkUI: {fileID: 1365163706}
   deleteUI: {fileID: 407385355}
   _currentPassage: 
