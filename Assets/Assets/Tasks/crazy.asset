@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
+  m_Name: crazy
+  m_EditorClassIdentifier: 
+  taskName: 
+  taskType: 0
+  difficulty: 0
+  rawText: crazy? I was crazy once. they put me in a room. a rubber room. a rubber
+    room with rats. the rats drove me crazy. crazy? I was crazy once. they put me
+    in a room. a rat room. a rat room with rubber rats. the rubber rats drove me
+    crazy. crazy? i was crazy once
+  displayText: "crazy? \nI was crazy once. they put me in a room. a rubber room.
+    a rubber room with rats. the rats drove me crazy.\ncrazy?\nI was crazy once.
+    they put me in a room. a rat room. a rat room with rubber rats. the rubber rats
+    drove me crazy.\ncrazy?\ni was crazy once"

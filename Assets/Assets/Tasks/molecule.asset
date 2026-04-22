@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d19f19b09160caa489cb2aefef9f2d51, type: 3}
-  m_Name: Task
+  m_Name: molecule
   m_EditorClassIdentifier: 
   taskName: primordial molecule
   taskType: 0

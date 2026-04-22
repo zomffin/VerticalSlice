@@ -527,6 +527,7 @@ MonoBehaviour:
   _position: {fileID: 1009997903}
   _startingInk: 1000
   _startingDelete: 100
+  _startingPaper: 0
   inkUI: {fileID: 1365163706}
   deleteUI: {fileID: 407385355}
   _currentPassage: 
@@ -594,31 +595,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Task
-      List","value":{"$content":[0,1,2],"$type":"System.Collections.Generic.List`1[[Task,
+      List","value":{"$content":[0,1,2,3,4],"$type":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
       Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Num
       of Tasks","value":{"$content":2,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Paper
-      Prefab","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Prefab","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Task
-      Spawn Location","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Spawn Location","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Current
       Tasks","value":{"$content":[],"$type":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
-      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"typingObject","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"typingObject","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"correctTask","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"incorrectTask","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Finished
-      Spawn Location","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Spawn Location","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UI
-      Manager","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Manager","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 11400000, guid: 06ffa6ebb39295b438c2db062620614a, type: 2}
     - {fileID: 11400000, guid: feb706c39012d2246b0739edd6c7301b, type: 2}
     - {fileID: 11400000, guid: 563c05ead94eb3c4cb469a05cf2c9301, type: 2}
+    - {fileID: 11400000, guid: 94d69255bbedf8e43bb9b37bb6722833, type: 2}
+    - {fileID: 11400000, guid: 2687e8b1d2b1b5d4fbd0e6c60ece8827, type: 2}
     - {fileID: 8602615564392631659, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
     - {fileID: 313028}
     - {fileID: 105429482}
@@ -749,7 +752,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 66
+  field of view: 64.9
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -775,13 +778,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4678988, y: -0, z: -0, w: 0.8837821}
-  m_LocalPosition: {x: 0, y: 6, z: -2.48}
+  m_LocalRotation: {x: 0.5354621, y: -0, z: -0, w: 0.8445593}
+  m_LocalPosition: {x: 0, y: 6.81, z: -1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 55.796, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 64.751, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,10 +960,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 38531314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106, y: -87.59999}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.0075000008, y: 0.80222225}
+  m_AnchorMax: {x: 0.25625002, y: 0.86}
+  m_AnchoredPosition: {x: 0.5, y: -11.599991}
+  m_SizeDelta: {x: 1, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &410087039
 GameObject:
@@ -1560,10 +1563,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 38531314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106, y: -61}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.0075000008, y: 0.86}
+  m_AnchorMax: {x: 0.25625002, y: 0.91777784}
+  m_AnchoredPosition: {x: 0.5, y: -11}
+  m_SizeDelta: {x: 1, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1365163705
 CanvasRenderer:
@@ -1696,10 +1699,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 38531314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106, y: -36}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.0075000008, y: 0.91777784}
+  m_AnchorMax: {x: 0.43500003, y: 0.9755556}
+  m_AnchoredPosition: {x: -71, y: -12}
+  m_SizeDelta: {x: -142, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415713722
 MonoBehaviour:
@@ -1786,7 +1789,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 24.96098}
+  m_margin: {x: 0, y: 0, z: -145.1823, w: 24.96098}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
