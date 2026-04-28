@@ -21,8 +21,6 @@ public class Locator : MonoBehaviour
         GameObject playerObj = GameObject.FindWithTag("Player");
         Player = playerObj.GetComponent<Player>();
         
-        DontDestroyOnLoad(this.gameObject);
-
     }
 
     
