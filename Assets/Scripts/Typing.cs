@@ -18,6 +18,7 @@ public class Typing : MonoBehaviour
     [Header("UI stuff")]
     [SerializeField] private TextMeshProUGUI inkUI;
     [SerializeField] private TextMeshProUGUI deleteUI;
+    [SerializeField] private TextMeshProUGUI paperUI;
 
     private int _currInk; 
     private int _currDelete;
@@ -39,6 +40,7 @@ public class Typing : MonoBehaviour
         
         _currInk = _startingInk;
         _currDelete = _startingDelete;
+        _currPaper =  _startingPaper;
     }
 
     // Update is called once per frame
@@ -118,21 +120,27 @@ public class Typing : MonoBehaviour
     {
         inkUI.text = "Ink: " + _currInk; 
         deleteUI.text = "Whiteout: " + _currDelete;
+        paperUI.text = "Paper: " + _currPaper;
     }
 
     public void AddInk(int num)
     {
         _currInk += num;
+        SetUI(); 
     }
 
     public void AddWhiteOut(int num)
     {
         _currDelete += num;
+        SetUI(); 
+
     }
 
     public void AddPaper(int num)
     {
         _currPaper += num;
+        SetUI(); 
+
     }
 
     private void EjectPaper()

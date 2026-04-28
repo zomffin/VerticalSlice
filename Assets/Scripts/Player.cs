@@ -170,7 +170,7 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _moveMask))
         {
             this.transform.position = hit.point;
-            _heldItem.position = new Vector3(hit.point.x, hit.point.y + 0.25f, hit.point.z);
+            _heldItem.position = new Vector3(hit.point.x, hit.point.y + 0.5f, hit.point.z);
         }
         else
         {
