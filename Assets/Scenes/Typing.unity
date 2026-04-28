@@ -226,10 +226,10 @@ MonoBehaviour:
       Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 38531310}
-    - {fileID: 0}
+    - {fileID: 527560304}
     - {fileID: 102476106}
     - {fileID: 1770584717}
-    - {fileID: 0}
+    - {fileID: 628081341}
 --- !u!1 &38531310
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,9 +750,9 @@ MonoBehaviour:
   _startingInk: 1000
   _startingDelete: 100
   _startingPaper: 10
-  inkUI: {fileID: 0}
-  deleteUI: {fileID: 0}
-  paperUI: {fileID: 0}
+  inkUI: {fileID: 1878945394}
+  deleteUI: {fileID: 878643292}
+  paperUI: {fileID: 1542555734}
   _currentPassage: 
 --- !u!1 &105499503
 GameObject:
