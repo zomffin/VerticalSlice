@@ -22,7 +22,9 @@ public class Typing : MonoBehaviour
 
     private int _currInk; 
     private int _currDelete;
-    private int _currPaper; 
+    private int _currPaper;
+
+    private int _currCorrect; 
     
     private string _taskPassage;
     [SerializeField] private string _currentPassage = "";
@@ -91,13 +93,15 @@ public class Typing : MonoBehaviour
                     {
                         _currentPassage += c; 
                         _paper.text = _currentPassage;
-                        _place++; 
+                        _place++;
+                        _currCorrect++; 
                     }
                     else
                     {
                         _currentPassage += "<color=red>" + c + "</color>";
                         _paper.text = _currentPassage;
-                        _place++; 
+                        _place++;
+                        _currCorrect--; 
                     }
                     
                     _currInk--;
@@ -147,9 +151,14 @@ public class Typing : MonoBehaviour
 
     private void EjectPaper()
     {
-        CustomEvent.Trigger(_gameManager, "finishTask", _currentPassage, _taskPassage);
+        float _percCorrect = (_currCorrect / (float)_taskPassage.Length); 
+        Debug.Log("perc correct: " + _percCorrect);
+        CustomEvent.Trigger(_gameManager, "finishTask", _percCorrect, _currentPassage);
         _currentPassage = "";
-        _paper.text = ""; 
+        _paper.text = "";
+        _currCorrect = 0;
+        _currPaper--; 
+        SetUI();
     }
 
     private void DeleteCode(bool second)
