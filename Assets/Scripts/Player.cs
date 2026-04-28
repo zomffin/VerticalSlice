@@ -46,13 +46,22 @@ public class Player : MonoBehaviour
     // click to interact with objects 
     void OnClick()
     {
+        if (_playerState == PlayerState.Typing)
+        {
+            _playerState = PlayerState.Moving;
+            typingEvent?.Invoke(false);
+            CustomEvent.Trigger(_gameManager, "typing", false);
+            Debug.Log("went from typing to moving");
+            return;
+        }
+        
         RaycastHit hit;
         if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, _interactMask))
         {
             switch (hit.collider.gameObject.tag)
             {
                 case "Type":
-                    if (_playerState == PlayerState.Typing)
+                    /*if (_playerState == PlayerState.Typing)
                     {
                         _playerState = PlayerState.Moving;
                         typingEvent?.Invoke(false);
@@ -60,12 +69,12 @@ public class Player : MonoBehaviour
                         Debug.Log("went from typing to moving");
                     }
                     else
-                    {
+                    {*/
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
                         CustomEvent.Trigger(_gameManager, "typing", true);
                         Debug.Log("went from moving to typing");
-                    }
+                    //}
                     break;
                 case "PickUp":
                     if (_playerState == PlayerState.Carrying)
