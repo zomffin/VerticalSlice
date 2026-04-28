@@ -41,6 +41,8 @@ public class Typing : MonoBehaviour
         _currInk = _startingInk;
         _currDelete = _startingDelete;
         _currPaper =  _startingPaper;
+
+        SetUI(); 
     }
 
     // Update is called once per frame

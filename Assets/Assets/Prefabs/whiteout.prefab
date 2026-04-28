@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6878781546690880656}
   - component: {fileID: 1291640872218708880}
   m_Layer: 6
-  m_Name: whiteout
+  m_Name: Whiteout
   m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
