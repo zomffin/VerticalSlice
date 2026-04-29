@@ -14,22 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: Kill the Hour
   taskType: 1
-  difficulty: 0
+  difficulty: 3
   rawText: 'Who has never killed an hour? Not casually or without thought, but carefully:
     a premeditated murder of minutes. The violence comes from a combination of giving
     up, not caring, and a resignation that getting past it is all you can hope to
-    accomplish. So you kill the hour. You do not work, you do not read, you do not
-    daydream. If you sleep it is not because you need to sleep. And when at last
-    it is over, there is no evidence: no weapon, no blood, and no body. The only
-    clue might be the shadows beneath your eyes or a terribly thin line near the
-    corner of your mouth indicating something has been suffered, that in the privacy
-    of your life you have lost something and the loss is too empty to share. '
+    accomplish. So you kill the hour.'
+  charCount: 271
   displayText: " \tWho has never killed an hour? Not casually or without thought,
     but carefully: a premeditated murder of minutes. The violence comes from a combination
     of giving up, not caring, and a resignation that getting past it is all you can
-    hope to accomplish. So you kill the hour. You do not work, you do not read, you
-    do not daydream. If you sleep it is not because you need to sleep. \n\tAnd when
-    at last it is over, there is no evidence: no weapon, no blood, and no body. The
-    only clue might be the shadows beneath your eyes or a terribly thin line near
-    the corner of your mouth indicating something has been suffered, that in the
-    privacy of your life you have lost something and the loss is too empty to share. "
+    hope to accomplish. So you kill the hour."

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskName: rats
   taskType: 0
-  difficulty: 0
+  difficulty: 3
   rawText: crazy? I was crazy once. they put me in a room. a rubber room. a rubber
     room with rats. the rats drove me crazy. crazy? I was crazy once. they put me
     in a room. a rat room. a rat room with rubber rats. the rubber rats drove me
-    crazy. crazy? i was crazy once
+    crazy. crazy?
+  charCount: 240
   displayText: "crazy? \nI was crazy once. they put me in a room. a rubber room.
     a rubber room with rats. the rats drove me crazy.\ncrazy?\nI was crazy once.
     they put me in a room. a rat room. a rat room with rubber rats. the rubber rats
-    drove me crazy.\ncrazy?\ni was crazy once"
+    drove me crazy.\ncrazy?"
