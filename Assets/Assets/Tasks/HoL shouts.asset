@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
+  m_Name: HoL shouts
+  m_EditorClassIdentifier: 
+  taskName: the children's shout
+  taskType: 1
+  difficulty: 3
+  rawText: The terrifying implication of their children's shouts is now impossible
+    to miss. No room in the house exceeds a length of twenty-five feet, let alone
+    fifty feet, let alone fifty-six and a half feet, and yet Chad and Daisy's voices
+    are echoing, each call responding with an entirely seperate answer.
+  charCount: 298
+  displayText: The terrifying implication of their children's shouts is now impossible
+    to miss. No room in the <color=blue>house</color> exceeds a length of twenty-five
+    feet, let alone fifty feet, let alone fifty-six and a half feet, and yet Chad
+    and Daisy's voices are echoing, each call responding with an entirely seperate
+    answer.

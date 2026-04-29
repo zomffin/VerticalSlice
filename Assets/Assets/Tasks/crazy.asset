@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: crazy
   m_EditorClassIdentifier: 
   taskName: rats
-  taskType: 0
+  taskType: 1
   difficulty: 3
   rawText: crazy? I was crazy once. they put me in a room. a rubber room. a rubber
     room with rats. the rats drove me crazy. crazy? I was crazy once. they put me

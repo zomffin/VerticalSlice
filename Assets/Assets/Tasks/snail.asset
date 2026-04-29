@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19f19b09160caa489cb2aefef9f2d51, type: 3}
   m_Name: snail
   m_EditorClassIdentifier: 
-  taskName: 
+  taskName: smell
   taskType: 0
   difficulty: 1
   rawText: do you know the smell of snails

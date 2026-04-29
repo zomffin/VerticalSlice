@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f808d9f60459d1349ac5afcd4200c18f, type: 3}
   m_Name: goo'd
   m_EditorClassIdentifier: 
-  taskName: 
-  taskType: 0
+  taskName: cheese
+  taskType: 1
   difficulty: 2
   rawText: I meet someone I am cheesed to meet them THE AUTHORITIES CANNOT FIND ENOUGH
     EVIDENCE TO MAKE THE CHARGES STICK THE CASE GOES COLD I meet someone
   charCount: 144
   displayText: 'I meet someone
 
+
     I am cheesed to meet them
+
 
     THE AUTHORITIES
     CANNOT FIND ENOUGH EVIDENCE TO MAKE THE CHARGES STICK
+
 
     THE CASE GOES COLD
 
