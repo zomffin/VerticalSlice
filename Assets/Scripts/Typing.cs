@@ -109,6 +109,21 @@ public class Typing : MonoBehaviour
             }  
             
             SetUI();
+            if (_currDelete <= 0 || _currInk <= 0 || _currPaper <= 0 && _place < _taskPassage.Length)
+            {
+                Debug.Log("something is less or equal to 0 ");
+                if (_currInk <= 0)
+                {
+                     CustomEvent.Trigger(_gameManager, "checkGameOver", 0);
+                } else if (_currDelete <= 0)
+                {
+                    CustomEvent.Trigger(_gameManager, "checkGameOver", 1);
+                } else if (_currPaper <= 0)
+                {
+                    CustomEvent.Trigger(_gameManager, "checkGameOver", 2);
+                }
+            }
+
         }
         
         
