@@ -193,6 +193,12 @@ public class Typing : MonoBehaviour
             _currentPassage = _currentPassage.Substring(0, index); 
         }
     }
+
+    public int[] GetResourceCount()
+    {
+        int[] resources = {_currInk, _currDelete,_currPaper};
+        return resources;
+    }
     
 
     //everyhing in game dev is hard and im crying 
