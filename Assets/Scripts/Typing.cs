@@ -109,6 +109,7 @@ public class Typing : MonoBehaviour
             }  
             
             SetUI();
+            // put more complex check, shouldn't be a game over if there's no more delete unless theres a mistake ?
             if (_currDelete <= 0 || _currInk <= 0 || _currPaper <= 0 && _place < _taskPassage.Length)
             {
                 Debug.Log("something is less or equal to 0 ");
