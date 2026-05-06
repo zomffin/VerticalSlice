@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class bag : MonoBehaviour
@@ -11,10 +12,13 @@ public class bag : MonoBehaviour
 
     [SerializeField] private int _paper; 
     
-    private Player _player; 
+    private Player _player;
+    private GameObject _manager; 
+    
     void Start()
     {
         _player = Locator.Instance.Player;
+        _manager = Locator.Instance.gameObject; 
     }
 
     void OnTriggerEnter(Collider other)
@@ -43,6 +47,7 @@ public class bag : MonoBehaviour
             Debug.Log("somethin did not work ehre....");
         }
         
+        //CustomEvent.Trigger(_manager, "checkList", other.GameObject());
         Destroy(other.gameObject);
     }
 }
