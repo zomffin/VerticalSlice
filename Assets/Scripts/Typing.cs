@@ -134,7 +134,7 @@ public class Typing : MonoBehaviour
     {
         _taskPassage = task;
         _place = 0;
-        Debug.Log("task was set to:" + _taskPassage);
+        //Debug.Log("task was set to:" + _taskPassage);
     }
     
 

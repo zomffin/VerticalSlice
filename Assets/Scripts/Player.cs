@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
                         CustomEvent.Trigger(_gameManager, "typing", true);
-                        Debug.Log("went from moving to typing");
+                        //Debug.Log("went from moving to typing");
                     //}
                     break;
                 case "PickUp":
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
         _playerState = PlayerState.Moving;
         typingEvent?.Invoke(false);
         CustomEvent.Trigger(_gameManager, "typing", false);
-        Debug.Log("went from typing to moving");
+        //Debug.Log("went from typing to moving");
     }
 
     public void TakeItem()

@@ -26,6 +26,11 @@ public class NPC : MonoBehaviour
 
     }
 
+    void OnEnable()
+    {
+        NewTarget(); 
+    }
+
     void OnDisable()
     {
         this.transform.position = _startLocation;
@@ -90,15 +95,20 @@ public class NPC : MonoBehaviour
         {
             return; 
         }
+        
+        Debug.Log("should have target PLeasplerfkawe;lrpwewlaeprawl");
+        _movingBack = false; 
         int index = Random.Range(0, _resources.Count);
         _target = _resources[index].transform.position;
         _targetName = _resources[index].name; 
         _heldObject = _resources[index];
+        Debug.Log("target is: " + _heldObject.name);
         //_resources.RemoveAt(index);
     }
 
     public void PopulateList(List<GameObject> items)
     {
         _resources = items; 
+        Debug.Log("populate list called");
     }
 }

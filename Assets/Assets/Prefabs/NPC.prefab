@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 461251385017866872}
   - component: {fileID: 3514070824942040382}
   - component: {fileID: 4027114412717737446}
+  - component: {fileID: 4828564127678596791}
   m_Layer: 2
   m_Name: NPC
   m_TagString: Untagged
@@ -102,3 +103,24 @@ MonoBehaviour:
   _startLocation: {x: 0, y: 0, z: 0}
   _speed: 0
   _checkDistance: 0
+--- !u!65 &4828564127678596791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692795979074372278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.999999, y: 0.14195597, z: 9.999999}
+  m_Center: {x: 0, y: 0.0058946013, z: 0}
