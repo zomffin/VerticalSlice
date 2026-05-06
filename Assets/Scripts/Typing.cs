@@ -50,11 +50,14 @@ public class Typing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && _currPaper > 0)
         {
             EjectPaper(); 
             _player.FinishTyping();
-            --_currPaper; 
+        }
+        else
+        {
+            CheckGameOver(); 
         }
         
         if (Input.inputString.Length > 0)
@@ -109,21 +112,7 @@ public class Typing : MonoBehaviour
             }  
             
             SetUI();
-            // put more complex check, shouldn't be a game over if there's no more delete unless theres a mistake ?
-            if (_currDelete <= 0 || _currInk <= 0 || _currPaper <= 0 && _place < _taskPassage.Length)
-            {
-                Debug.Log("something is less or equal to 0 ");
-                if (_currInk <= 0)
-                {
-                     CustomEvent.Trigger(_gameManager, "checkGameOver", 0);
-                } else if (_currDelete <= 0)
-                {
-                    CustomEvent.Trigger(_gameManager, "checkGameOver", 1);
-                } else if (_currPaper <= 0)
-                {
-                    CustomEvent.Trigger(_gameManager, "checkGameOver", 2);
-                }
-            }
+            CheckGameOver(); 
 
         }
         
@@ -136,7 +125,25 @@ public class Typing : MonoBehaviour
         _place = 0;
         //Debug.Log("task was set to:" + _taskPassage);
     }
-    
+
+    private void CheckGameOver()
+    {
+        // put more complex check, shouldn't be a game over if there's no more delete unless theres a mistake ?
+        if (_currDelete <= 0 || _currInk <= 0 || _currPaper <= 0 && _place < _taskPassage.Length)
+        {
+            Debug.Log("something is less or equal to 0 ");
+            if (_currInk <= 0)
+            {
+                CustomEvent.Trigger(_gameManager, "checkGameOver", 0);
+            } else if (_currDelete <= 0)
+            {
+                CustomEvent.Trigger(_gameManager, "checkGameOver", 1);
+            } else if (_currPaper <= 0)
+            {
+                CustomEvent.Trigger(_gameManager, "checkGameOver", 2);
+            }
+        }
+    }
 
     private void SetUI()
     {
@@ -200,38 +207,5 @@ public class Typing : MonoBehaviour
         return resources;
     }
     
-
-    //everyhing in game dev is hard and im crying 
     
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("on trigger enter triggered");
-        
-        if (other.name.Contains("Paper"))
-        {
-            _paper = other.GetComponentInChildren<TextMeshPro>(); 
-            _currentPassage =  _paper.text;
-            other.transform.position = _position.position;
-            other.transform.rotation = _position.rotation;
-            //other.GetComponent<Rigidbody>().isKinematic = false;
-            other.GetComponent<Rigidbody>(). = false; 
-            _player.TakeItem();
-        }
-        else
-        {
-            Debug.Log("hit with a collider that isnt paper");
-        }
-    }*/
-
-    /*private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("On trigger exit triggered");
-        
-        if (other.name.Contains("Paper"))
-        {
-            _paper = null;
-            _currentPassage = "";
-            //other.GetComponent<Rigidbody>().isKinematic = true;
-        }
-    }*/
 }

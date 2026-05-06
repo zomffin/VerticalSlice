@@ -103,18 +103,18 @@ public class NPC : MonoBehaviour
             return; 
         }
         
-        Debug.Log("should have target PLeasplerfkawe;lrpwewlaeprawl");
+        //Debug.Log("should have target PLeasplerfkawe;lrpwewlaeprawl");
         _movingBack = false; 
         int index = Random.Range(0, _resources.Count);
         int count = 0; 
         while (_resources[index] == null && count < 10)
         {
             _resources.RemoveAt(index); 
-            Debug.Log("npc remmoved list item");
+            //Debug.Log("npc remmoved list item");
             index = Random.Range(0, _resources.Count);
             count++;
         }
-        Debug.Log("isndex is : " + index + " length is: " + _resources.Count);
+        //Debug.Log("isndex is : " + index + " length is: " + _resources.Count);
         _target = _resources[index].transform.position;
         _targetName = _resources[index].name; 
         _heldObject = _resources[index];

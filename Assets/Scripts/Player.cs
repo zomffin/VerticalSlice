@@ -61,20 +61,9 @@ public class Player : MonoBehaviour
             switch (hit.collider.gameObject.tag)
             {
                 case "Type":
-                    /*if (_playerState == PlayerState.Typing)
-                    {
-                        _playerState = PlayerState.Moving;
-                        typingEvent?.Invoke(false);
-                        CustomEvent.Trigger(_gameManager, "typing", false);
-                        Debug.Log("went from typing to moving");
-                    }
-                    else
-                    {*/
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
                         CustomEvent.Trigger(_gameManager, "typing", true);
-                        //Debug.Log("went from moving to typing");
-                    //}
                     break;
                 case "PickUp":
                     if (_playerState == PlayerState.Carrying)
@@ -105,7 +94,6 @@ public class Player : MonoBehaviour
         _playerState = PlayerState.Moving;
         typingEvent?.Invoke(false);
         CustomEvent.Trigger(_gameManager, "typing", false);
-        //Debug.Log("went from typing to moving");
     }
 
     public void TakeItem()
