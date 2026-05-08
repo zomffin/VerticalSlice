@@ -24,7 +24,8 @@ public class Typing : MonoBehaviour
     private int _currDelete;
     private int _currPaper;
 
-    private int _currCorrect; 
+    private int _currCorrect;
+    private int _currIncorrect; 
     
     private string _taskPassage;
     [SerializeField] private string _currentPassage = "";
@@ -33,6 +34,7 @@ public class Typing : MonoBehaviour
 
     private Player _player;
     private GameObject _gameManager; 
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,12 +75,14 @@ public class Typing : MonoBehaviour
                         {
                             DeleteCode(false);
                             DeleteCode(true);
-                            _paper.text = _currentPassage; 
+                            _paper.text = _currentPassage;
+                            _currIncorrect--; 
                         }
                         else
                         {
                             _currentPassage = _currentPassage.Substring(0, _currentPassage.Length - 1);
-                            _paper.text = _currentPassage; 
+                            _paper.text = _currentPassage;
+                            _currCorrect--; 
                         }
 
                         _place--; 
@@ -104,7 +108,7 @@ public class Typing : MonoBehaviour
                         _currentPassage += "<color=red>" + c + "</color>";
                         _paper.text = _currentPassage;
                         _place++;
-                        _currCorrect--; 
+                        _currIncorrect++;
                     }
                     
                     _currInk--;
@@ -162,20 +166,32 @@ public class Typing : MonoBehaviour
     {
         _currDelete += num;
         SetUI(); 
-
     }
 
     public void AddPaper(int num)
     {
         _currPaper += num;
         SetUI(); 
-
     }
 
     private void EjectPaper()
     {
-        float _percCorrect = (_currCorrect / (float)_taskPassage.Length); 
+        // float _percCorrect = (_currCorrect / (float)_taskPassage.Length); 
+        int _total = _currCorrect + _currIncorrect;
+        float _percCorrect; 
+
+        if (_total <= _taskPassage.Length)
+        {
+            _percCorrect = (_currCorrect - _currIncorrect) / (float)_taskPassage.Length; 
+        }
+        else
+        {
+            _percCorrect = _currCorrect / (float)_total;
+        }
+        
+
         Debug.Log("perc correct: " + _percCorrect);
+        Debug.Log("current correct: " + _currCorrect + "/ " + _total);
         CustomEvent.Trigger(_gameManager, "finishTask", _percCorrect, _currentPassage);
         _currentPassage = "";
         _paper.text = "";

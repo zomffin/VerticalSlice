@@ -125,6 +125,5 @@ public class NPC : MonoBehaviour
     public void PopulateList(List<GameObject> items)
     {
         _resources = items; 
-        Debug.Log("populate list called");
     }
 }
