@@ -96,8 +96,13 @@ public class Player : MonoBehaviour
         CustomEvent.Trigger(_gameManager, "typing", false);
     }
 
-    public void TakeItem()
+    public void TakeItem(GameObject item)
     {
+        if (item != _heldItem.gameObject)
+        {
+            return;
+        }
+        
         if (_playerState == PlayerState.Carrying)
         {
             _playerState = PlayerState.Moving;
