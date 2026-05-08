@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
 
     public void TakeItem(GameObject item)
     {
-        if (item != _heldItem.gameObject)
+        if (_playerState != PlayerState.Carrying || item != _heldItem.gameObject)
         {
             return;
         }
@@ -111,6 +111,19 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("Take item triggered when player isnt carrying");
+        }
+    }
+
+    public void TakeItem()
+    {
+        if (_playerState == PlayerState.Carrying)
+        {
+            _playerState = PlayerState.Moving;
+            _heldItem = null;
+        }
+        else
+        {
+            Debug.Log("Take item triggered when player isnt carrying (overloaded method)");
         }
     }
 

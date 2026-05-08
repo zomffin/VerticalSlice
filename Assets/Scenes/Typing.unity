@@ -834,33 +834,34 @@ MonoBehaviour:
       List","value":{"$content":[0,1,2,3,4,5,6,7,8],"$type":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
-      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Num
+      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"player","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Player,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Num
       of Tasks","value":{"$content":3,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Paper
-      Prefab","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Prefab","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Task
-      Spawn Location","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Spawn Location","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Current
       Tasks","value":{"$content":[],"$type":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[Task,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
-      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"typingObject","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"typingObject","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"correctTask","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"incorrectTask","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Finished
-      Spawn Location","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Spawn Location","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UI
-      Manager","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"resourcesCamera","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"inkObject","value":{"$content":15,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"whiteoutObject","value":{"$content":16,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"resourceSpawn","value":{"$content":17,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"restartButton","value":{"$content":18,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      Manager","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"resourcesCamera","value":{"$content":15,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"inkObject","value":{"$content":16,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"whiteoutObject","value":{"$content":17,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"resourceSpawn","value":{"$content":18,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"restartButton","value":{"$content":19,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"gameOverState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"totalTasks","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"numCompletedTasks","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"overallAvg","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"NPCs","value":{"$content":[{"$content":19,"$type":"UnityEngine.Object"}],"$type":"Unity.VisualScripting.AotList"},"typeHandle":{"Identification":"Unity.VisualScripting.AotList,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"NPCs","value":{"$content":[{"$content":20,"$type":"UnityEngine.Object"}],"$type":"Unity.VisualScripting.AotList"},"typeHandle":{"Identification":"Unity.VisualScripting.AotList,
       Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 11400000, guid: 06ffa6ebb39295b438c2db062620614a, type: 2}
@@ -872,6 +873,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 82bdf8e066c26cb44813d9ee45f607f4, type: 2}
     - {fileID: 11400000, guid: 2d9ff19a7f44904488996d47f231ce2b, type: 2}
     - {fileID: 11400000, guid: 75cc1b80d8ed1b340a6be532edd54388, type: 2}
+    - {fileID: 847488547}
     - {fileID: 8602615564392631659, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
     - {fileID: 313028}
     - {fileID: 105429482}
@@ -2375,6 +2377,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847488547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+  m_PrefabInstance: {fileID: 4050443177620622554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2ead11620eb2b4eb2a58eefb3d8b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &868690954
 GameObject:
   m_ObjectHideFlags: 0
