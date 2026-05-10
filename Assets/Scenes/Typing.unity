@@ -862,7 +862,8 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"numCompletedTasks","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"overallAvg","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"NPCs","value":{"$content":[{"$content":20,"$type":"UnityEngine.Object"}],"$type":"Unity.VisualScripting.AotList"},"typeHandle":{"Identification":"Unity.VisualScripting.AotList,
-      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"currStoryEvent","value":{"$content":21,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Event,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 11400000, guid: 06ffa6ebb39295b438c2db062620614a, type: 2}
     - {fileID: 11400000, guid: feb706c39012d2246b0739edd6c7301b, type: 2}
@@ -885,6 +886,7 @@ MonoBehaviour:
     - {fileID: 285077780}
     - {fileID: 601224740}
     - {fileID: 157847170}
+    - {fileID: 11400000, guid: ca84953dbb84a4547a83e2be344b3b9a, type: 2}
 --- !u!114 &105499508
 MonoBehaviour:
   m_ObjectHideFlags: 0
