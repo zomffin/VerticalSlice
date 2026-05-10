@@ -5,6 +5,13 @@ using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Random = UnityEngine.Random;
 
+enum NPCState
+{
+    Getting,
+    Returning, 
+    Idle
+}
+
 public class NPC : MonoBehaviour
 {
 
@@ -13,26 +20,32 @@ public class NPC : MonoBehaviour
     [SerializeField] private float _checkDistance; 
     
     private Player _player;
+    
+    private NPCState _state;
 
     private List<GameObject> _resources;
     private Vector3 _target;
     private string _targetName;
     private GameObject _heldObject;
-    private bool _movingBack; 
+    //private bool _movingBack; 
     
     void Start()
     {
         _player = Locator.Instance.Player;
-
+        //_state = NPCState.Idle;
+        _state = NPCState.Getting;
     }
 
     void OnEnable()
     {
+        Debug.Log("enabled, shgouldbe getting.....");
+        _state = NPCState.Getting; 
         NewTarget(); 
     }
 
     void OnDisable()
     {
+        //_state = NPCState.Idle;
         this.transform.position = _startLocation;
         _target = _startLocation;
         _heldObject = null;
@@ -41,14 +54,23 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_movingBack)
+        Debug.Log("_state: " + _state);
+        switch (_state)
         {
-            movingBack();
+            case NPCState.Getting:
+                gettingItem();
+                break;
+            case NPCState.Returning:
+                movingBack();
+                break;
+            case NPCState.Idle:
+
+                break;
+            default:
+                Debug.Log("something wrong with NPC state");
+                break; 
         }
-        else
-        {
-            gettingItem(); 
-        }
+        
         
     }
 
@@ -57,11 +79,7 @@ public class NPC : MonoBehaviour
         if (other.name == _targetName)
         {
             _target = _startLocation; 
-            _movingBack = true;
-        }
-        else
-        {
-            
+            _state = NPCState.Returning;
         }
     }
 
@@ -70,7 +88,7 @@ public class NPC : MonoBehaviour
         if (!_heldObject)
         {
             NewTarget();
-            _movingBack = false; 
+            _state = NPCState.Getting;
         }
         
         transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
@@ -78,7 +96,7 @@ public class NPC : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _target) < _checkDistance)
         {
-            _movingBack = false;
+            _state = NPCState.Getting;
             NewTarget(); 
         } 
     }
@@ -98,20 +116,29 @@ public class NPC : MonoBehaviour
         
     void NewTarget()
     {
-        if (_resources.Count == 0 || _resources == null)
+        if (_resources.Count <= 0 || _resources == null)
         {
+            _state = NPCState.Idle;
             return; 
         }
         
-        _movingBack = false; 
+        _state = NPCState.Getting;
         int index = Random.Range(0, _resources.Count);
         int count = 0; 
+        
         while (_resources[index] == null && count < 10)
         {
             _resources.RemoveAt(index); 
             index = Random.Range(0, _resources.Count);
             count++;
+
+            if (_resources.Count <= 0)
+            {
+                _state = NPCState.Idle;
+                return; 
+            }
         }
+        
         _target = _resources[index].transform.position;
         _targetName = _resources[index].name; 
         _heldObject = _resources[index];
@@ -119,6 +146,7 @@ public class NPC : MonoBehaviour
 
     public void PopulateList(List<GameObject> items)
     {
+        Debug.Log("Populate list called");
         _resources = items; 
     }
 }
