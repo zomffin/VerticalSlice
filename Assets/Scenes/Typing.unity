@@ -739,7 +739,7 @@ Transform:
   m_GameObject: {fileID: 105429482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.08, z: 1.49}
+  m_LocalPosition: {x: 0.06, y: 0.08, z: 0.32999992}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2540,6 +2540,18 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5534544866476174634, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534544866476174634, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534544866476174634, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5932317424313171136, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
       propertyPath: m_Constraints
       value: 0
@@ -2562,11 +2574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218403914692244985, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.88
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 9218403914692244985, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.02
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 9218403914692244985, guid: 87832872ec9cd7f4facdd48d4985a234, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2896,8 +2908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"round","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!4 &1191423136
 Transform:
@@ -4663,7 +4674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661953752118924407, guid: ceed133474e4f0b4bbcc5024f6b97c85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.05
+      value: 0.88999987
       objectReference: {fileID: 0}
     - target: {fileID: 2661953752118924407, guid: ceed133474e4f0b4bbcc5024f6b97c85, type: 3}
       propertyPath: m_LocalRotation.w
