@@ -15,6 +15,7 @@ MonoBehaviour:
   taskName: Good Work.
   taskType: 1
   difficulty: 1
+  isStoryEvent: 1
   rawText: Your Welcome
   charCount: 12
   displayText: "Now. refill your ink, and you will begin your work for real. \n\nThank

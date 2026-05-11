@@ -15,6 +15,7 @@ MonoBehaviour:
   taskName: Type Carefully
   taskType: 1
   difficulty: 1
+  isStoryEvent: 1
   rawText: I Type (Carefully) to Live.
   charCount: 27
   displayText: "Due to unfortunate circumstances, resources are limited at Evil Inc.

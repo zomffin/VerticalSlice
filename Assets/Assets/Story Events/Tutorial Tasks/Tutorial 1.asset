@@ -15,6 +15,7 @@ MonoBehaviour:
   taskName: Welcome.
   taskType: 1
   difficulty: 1
+  isStoryEvent: 1
   rawText: I Type to Live.
   charCount: 15
   displayText: "Hello, and welcome to your First and Last Job at Evil Inc. Your job

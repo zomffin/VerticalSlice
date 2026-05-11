@@ -13,6 +13,7 @@ public class Task : ScriptableObject
     public string taskName; 
     public TaskType taskType; 
     public int difficulty;
+    public bool isStoryEvent = false; 
     [TextArea(15, 20)] 
     public string rawText;
 
