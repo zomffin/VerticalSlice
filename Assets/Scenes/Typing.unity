@@ -861,7 +861,9 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"numCompletedTasks","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"overallAvg","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"NPCs","value":{"$content":[{"$content":19,"$type":"UnityEngine.Object"}],"$type":"Unity.VisualScripting.AotList"},"typeHandle":{"Identification":"Unity.VisualScripting.AotList,
-      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"currStoryEvent","value":{"$content":20,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Event,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"player","value":{"$content":21,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Player,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 11400000, guid: 06ffa6ebb39295b438c2db062620614a, type: 2}
     - {fileID: 11400000, guid: feb706c39012d2246b0739edd6c7301b, type: 2}
@@ -883,6 +885,8 @@ MonoBehaviour:
     - {fileID: 285077780}
     - {fileID: 601224740}
     - {fileID: 157847170}
+    - {fileID: 11400000, guid: ca84953dbb84a4547a83e2be344b3b9a, type: 2}
+    - {fileID: 1610566891}
 --- !u!114 &105499508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2892,7 +2896,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"round","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!4 &1191423136
 Transform:
@@ -3377,6 +3382,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542555732}
   m_CullTransparentMesh: 1
+--- !u!114 &1610566891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+  m_PrefabInstance: {fileID: 4050443177620622554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2ead11620eb2b4eb2a58eefb3d8b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1624299134
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,4 +22,5 @@ MonoBehaviour:
   roundTrigger: 0
   hasTrigger: 0
   trigger: 
+  isOneAtATime: 1
   nextEvents: []

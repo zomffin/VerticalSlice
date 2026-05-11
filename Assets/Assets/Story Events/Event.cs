@@ -14,7 +14,9 @@ public class Event : ScriptableObject
     public int roundTrigger;
 
     public bool hasTrigger;
-    public string trigger; 
+    public string trigger;
+
+    public bool isOneAtATime; 
 
     [Header("Following Event")]
     public List<Event> nextEvents;
