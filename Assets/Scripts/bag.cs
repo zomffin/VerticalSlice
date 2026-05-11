@@ -44,7 +44,7 @@ public class bag : MonoBehaviour
         }
         else
         {
-            Debug.Log("somethin did not work ehre....");
+            Debug.Log("somethin did not work ehre.... touch dis: " + other.gameObject.name);
         }
         
         //CustomEvent.Trigger(_manager, "checkList", other.GameObject());
