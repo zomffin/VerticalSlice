@@ -6,7 +6,7 @@ public enum TaskType
     Typing
 }
 
-[CreateAssetMenu(fileName = "Task", menuName = "Scriptable Objects/Task")]
+[CreateAssetMenu(fileName = "Task", menuName = "Scriptable Objects/Tasks/Task")]
 
 public class Task : ScriptableObject
 {

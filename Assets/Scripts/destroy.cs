@@ -13,7 +13,7 @@ public class destroy : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        _player.TakeItem();
+        _player.TakeItem(other.gameObject);
         //CustomEvent.Trigger(_manager, "checkList", other.GameObject());
         Destroy(other.GameObject());
     }

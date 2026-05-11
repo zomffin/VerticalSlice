@@ -28,7 +28,7 @@ public class bag : MonoBehaviour
             return; 
         }
 
-        _player.TakeItem(); 
+        _player.TakeItem(other.gameObject); 
         
         if (other.name.Contains("Ink"))
         {

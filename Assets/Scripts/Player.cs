@@ -96,6 +96,24 @@ public class Player : MonoBehaviour
         CustomEvent.Trigger(_gameManager, "typing", false);
     }
 
+    public void TakeItem(GameObject item)
+    {
+        if (_playerState != PlayerState.Carrying || item != _heldItem.gameObject)
+        {
+            return;
+        }
+        
+        if (_playerState == PlayerState.Carrying)
+        {
+            _playerState = PlayerState.Moving;
+            _heldItem = null;
+        }
+        else
+        {
+            Debug.Log("Take item triggered when player isnt carrying");
+        }
+    }
+
     public void TakeItem()
     {
         if (_playerState == PlayerState.Carrying)
@@ -105,7 +123,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.Log("Take item triggered when player isnt carrying");
+            Debug.Log("Take item triggered when player isnt carrying (overloaded method)");
         }
     }
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8f75d1159660b48b9b3ada02da1462, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  orderMatters: 1
+  tasks:
+  - {fileID: 11400000, guid: 58dfd4d1ff2cf1e48b32ceaebbab2700, type: 2}
+  - {fileID: 11400000, guid: de185966606b1d943b973659d4cfb070, type: 2}
+  - {fileID: 11400000, guid: 8650a953048dad849ab8d8160e996da3, type: 2}
+  - {fileID: 11400000, guid: ef0deeabd712b374893384ffafb97b20, type: 2}
+  roundAdditive: 0
+  roundTrigger: 0
+  hasTrigger: 0
+  trigger: 
+  nextEvents: []
