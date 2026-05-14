@@ -16,7 +16,9 @@ MonoBehaviour:
   taskType: 1
   difficulty: 1
   isStoryEvent: 1
-  rawText: Your Welcome
-  charCount: 12
+  rawText: Your Welcome.
+  charCount: 13
+  hasSpecialInstruction: 0
+  specialInstruction: 
   displayText: "Now. refill your ink, and you will begin your work for real. \n\nThank
     you for Working at Evil Inc.\n\nRepeat:\n\"Your Welcome.\""
