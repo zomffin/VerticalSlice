@@ -16,7 +16,32 @@ Since the state machine is the game manager, it communicates with almost every o
 
 
 ## Milestone 2 Devlog
-Milestone 2 Devlog goes here.
+1. Implementation plan
+The main feature to be added for this milestone is the NPCs during the resource period. These NPCs will grab items and take them to their own "bag" of items, where the item will be deleted (so the player can't get it).
+
+Big Steps:
+1. Basic functionality for a targetting + movement system 
+    a. Using the movetowards method, have the npc move towards a static position
+    b. Have a List of items, which the NPC randomly targets
+   
+2. State machine for targetting 
+   a. Have the game manager send/update list of items
+   b. Once the NPC collides with the targetted item, return back and drop item
+   c. Remove the item from the list and delete the GameObject. 
+
+2. 
+To be completely honest, I forgot to do this breakdown ahead of time... However, it is sorta how I approach my problem solving anyways. I think the biggest issue with planning like this is I start noticing possible errors ahead of time and get too obsessed with them to move forward.
+
+3. 
+There's a lot of scripts and graphs talking between one another.... One of the main ones I added for this milestone involves the NPC. The NPC script contains a method to copy a list of gameobjects, which the gamemanager (the one spawning the resources) calls to send the list to. I ran into a lot of problems with null refs with this (because these resources get deleted by both the player and the NPC).
+
+4. 
+I am heavily using scriptable objects in my Project. Currently, I have 2 types- one called "Events" (for future story events, currently there's only a tutorial) and "Tasks" (the main gameplay quest).
+They're found in Assets/Assets/Tasks or StoryEvents. They're Tasks.cs,  TypingTask.cs, and Event.cs
+
+Events have a list of associated tasks, if these tasks spawn one a time, as well as a bunch of info of how/when it's triggered- which game round, if it's triggered by a string detected within completed tasks, etc. 
+Tasks themselves contain info for what the player has to type ("raw text"), the task name (appears in UI), a character count (for future difficulty scaling) as well as a second type of Task that has a raw text thats different from the display text (what appears on the task paper). 
+
 ## Milestone 3 Devlog
 Milestone 3 Devlog goes here.
 ## Milestone 4 Devlog
