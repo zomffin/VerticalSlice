@@ -21,5 +21,5 @@ MonoBehaviour:
   hasSpecialInstruction: 0
   specialInstruction: 
   displayText: "Your job is to transcribe text, exactly as written, with some exceptions.
-    Pay attention to what task you are assigned.\n\nIgnore line breaks.\n\nYour work
-    is Case Sensitive. \n\nRepeat: \n\"I Type\nTo Live.\""
+    The order you complete tasks matters: <b>Pay attention to what task you are assigned.</b>\n\nIgnore
+    line breaks.\n\nYour work is Case Sensitive. \n\nRepeat: \n\"I Type\nTo Live.\""

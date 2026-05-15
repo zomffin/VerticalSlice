@@ -64,12 +64,13 @@ public class Typing : MonoBehaviour
         
         if (Input.inputString.Length > 0)
         {
+            Debug.Log("index: " + _place);
             
             foreach (char c in Input.inputString)
             {
                 if (c == '\b') // has backspace/delete been pressed?
                 {
-                    if (_currentPassage.Length != 0 && _currDelete > 0)
+                    if (_currentPassage.Length > 0 && _currDelete > 0 && _place > 0)
                     {
                         if (_currentPassage[_currentPassage.Length - 1] == '>')
                         {
@@ -91,6 +92,7 @@ public class Typing : MonoBehaviour
                 }
                 else if ((c == '\n') || (c == '\r')) // enter/return
                 {
+                    
                     Debug.Log("player hit enter");
                 }
                 else if (_currInk > 0)

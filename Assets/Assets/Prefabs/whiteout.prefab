@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6878781546690880656}
   - component: {fileID: 1291640872218708880}
   m_Layer: 6
-  m_Name: Whiteout
+  m_Name: whiteout
   m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.83, y: 2.64, z: 0.87}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
