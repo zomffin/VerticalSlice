@@ -15,10 +15,10 @@ public class Typing : MonoBehaviour
     [SerializeField] private int _startingDelete;
     [SerializeField] private int _startingPaper; 
     
-    [Header("UI stuff")]
+    /*[Header("UI stuff")]
     [SerializeField] private TextMeshProUGUI inkUI;
     [SerializeField] private TextMeshProUGUI deleteUI;
-    [SerializeField] private TextMeshProUGUI paperUI;
+    [SerializeField] private TextMeshProUGUI paperUI;*/
 
     private int _currInk; 
     private int _currDelete;

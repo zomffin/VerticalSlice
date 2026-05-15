@@ -1,4 +1,5 @@
 using NUnit.Framework.Interfaces;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ enum PlayerState
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _playerStatus;
+    
     [SerializeField] private LayerMask _moveMask;
     [SerializeField] private LayerMask _interactMask; 
     [SerializeField] private Camera _camera; 
@@ -38,7 +41,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         //UpdateState(); currently does nothing
-
+        
+        updateStateUI();
+        
         RunState(); 
         
     }
@@ -182,5 +187,26 @@ public class Player : MonoBehaviour
         {
             
         }
+    }
+
+    private void updateStateUI()
+    {
+        switch (_playerState)
+        {
+            case PlayerState.Moving:
+                _playerStatus.text = "You are moving"; 
+                break;
+            case PlayerState.Typing:
+                _playerStatus.text = "You are typing";
+                break;
+            case PlayerState.Carrying:
+                _playerStatus.text = "You are carrying";
+                break;
+            default:
+                _playerStatus.text = "You are... doing something not accounted for!";
+                break;
+        }
+        
+        
     }
 }
