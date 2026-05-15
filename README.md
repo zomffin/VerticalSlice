@@ -34,8 +34,11 @@ To be completely honest, I forgot to do this breakdown ahead of time... However,
 
 3. 
 There's a lot of scripts and graphs talking between one another.... One of the main ones I added for this milestone involves the NPC. The NPC script contains a method to copy a list of gameobjects, which the gamemanager (the one spawning the resources) calls to send the list to. I ran into a lot of problems with null refs with this (because these resources get deleted by both the player and the NPC).
+In my scripts, I use CustomEventTrigger rather than what was spoken about in class. I used it before we learned about it, so I ended up using it more.
+<img width="1243" height="580" alt="image" src="https://github.com/user-attachments/assets/91adf83b-2fe4-428b-b559-e5fb42a38711" />
+Here's one of the uses of a C# script method from my GameManager graph. This screenshot comes at the end of a full method that spawns the gameobjects, so its passing the reference to the list to the NPCs (there's only one currently but there will be more in the future, hence the foreach loop). 
 
-4. 
+5. 
 I am heavily using scriptable objects in my Project. Currently, I have 2 types- one called "Events" (for future story events, currently there's only a tutorial) and "Tasks" (the main gameplay quest).
 They're found in Assets/Assets/Tasks or StoryEvents. They're Tasks.cs,  TypingTask.cs, and Event.cs
 
