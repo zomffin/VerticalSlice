@@ -33,20 +33,24 @@ public class Typing : MonoBehaviour
     private int _place;
 
     private Player _player;
-    private GameObject _gameManager; 
+    private GameObject _gameManager;
+    private GameObject _UIManager; 
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _player = Locator.Instance.Player;
-        _gameManager = Locator.Instance.gameObject; 
+        _gameManager = Locator.Instance.gameObject;
+        _UIManager = Locator.Instance.UIManager; 
+        
+        //Debug.Log("UIManager: " + _UIManager.name);
         
         _currInk = _startingInk;
         _currDelete = _startingDelete;
         _currPaper =  _startingPaper;
 
-        SetUI(); 
+        CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
     }
 
     // Update is called once per frame
@@ -117,7 +121,8 @@ public class Typing : MonoBehaviour
                 }
             }  
             
-            SetUI();
+            CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
+
             CheckGameOver(); 
 
         }
@@ -151,29 +156,22 @@ public class Typing : MonoBehaviour
         }
     }
 
-    private void SetUI()
-    {
-        inkUI.text = "Ink: " + _currInk; 
-        deleteUI.text = "Whiteout: " + _currDelete;
-        paperUI.text = "Paper: " + _currPaper;
-    }
-
     public void AddInk(int num)
     {
         _currInk += num;
-        SetUI(); 
+        CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
     }
 
     public void AddWhiteOut(int num)
     {
         _currDelete += num;
-        SetUI(); 
+        CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
     }
 
     public void AddPaper(int num)
     {
         _currPaper += num;
-        SetUI(); 
+        CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
     }
 
     private void EjectPaper()
@@ -199,7 +197,7 @@ public class Typing : MonoBehaviour
         _paper.text = "";
         _currCorrect = 0;
         _currPaper--; 
-        SetUI();
+        CustomEvent.Trigger(_UIManager, "updateResources", _currInk, _currDelete, _currPaper);
     }
 
     private void DeleteCode(bool second)

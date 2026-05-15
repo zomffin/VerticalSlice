@@ -6,6 +6,7 @@ public class Locator : MonoBehaviour
 {
     public static Locator Instance { get; private set; }
     public Player Player { get; private set; }
+    public GameObject UIManager { get; private set; }
     
     
     void Awake()
@@ -20,6 +21,9 @@ public class Locator : MonoBehaviour
         
         GameObject playerObj = GameObject.FindWithTag("Player");
         Player = playerObj.GetComponent<Player>();
+        
+        UIManager = GameObject.Find("UI Manager");
+        
         
     }
 
