@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         RunState(); 
         
         //animation stuff 
-        currentIndex += _fps * Time.deltaTime;
+        Animate();
         
     }
     
@@ -226,7 +226,7 @@ public class Player : MonoBehaviour
         
     }
 
-    private void animate()
+    private void Animate()
     {
         currentIndex += _fps * Time.deltaTime;
 

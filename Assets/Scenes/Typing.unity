@@ -5158,6 +5158,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4559214768567687483, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559214768567687483, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _fps
       value: 1
@@ -5186,6 +5194,18 @@ PrefabInstance:
       propertyPath: _interactMask.m_Bits
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: '_idling.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 12d059458936e304ab4d3e8aab747685, type: 3}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: '_idling.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 5f587de4c1fc4914490e6e7a10742bb2, type: 3}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: '_idling.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2800000, guid: b80f2e344ab40b641ba5eb8faf78dac3, type: 3}
     - target: {fileID: 6528722471375984604, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: m_Name
       value: Player
