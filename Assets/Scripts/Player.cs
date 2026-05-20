@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NUnit.Framework.Interfaces;
 using TMPro;
 using Unity.VisualScripting;
@@ -16,7 +17,17 @@ public class Player : MonoBehaviour
     
     [SerializeField] private LayerMask _moveMask;
     [SerializeField] private LayerMask _interactMask; 
-    [SerializeField] private Camera _camera; 
+    [SerializeField] private Camera _camera;
+
+    [Header("Animation Stuff")]
+    [SerializeField] private List<Texture2D> _idling;
+    [SerializeField] private List<Texture2D> _carrying;
+    [SerializeField] private List<Texture2D> _typing;
+    [SerializeField] private Renderer _renderer;
+    [Range(0,24)][SerializeField] private int _fps; 
+    private float currentIndex;
+    private List<Texture2D> _currentAnimation; 
+    
     
     private PlayerState _playerState;
     private float _deltaMove; // for move towards which isnt being used (yet)
@@ -35,7 +46,9 @@ public class Player : MonoBehaviour
         //Cursor.visible = false; 
         Cursor.lockState = CursorLockMode.Confined;
 
-        _gameManager = Locator.Instance.gameObject; 
+        _gameManager = Locator.Instance.gameObject;
+
+        _currentAnimation = _idling; 
     }
 
     void Update()
@@ -45,6 +58,9 @@ public class Player : MonoBehaviour
         updateStateUI();
         
         RunState(); 
+        
+        //animation stuff 
+        currentIndex += _fps * Time.deltaTime;
         
     }
     
@@ -208,5 +224,21 @@ public class Player : MonoBehaviour
         }
         
         
+    }
+
+    private void animate()
+    {
+        currentIndex += _fps * Time.deltaTime;
+
+        var i = (int)currentIndex;
+
+        if (i > _currentAnimation.Count - 1)
+        {
+            currentIndex = 0;
+            i = 0;
+        }
+
+        // _BaseMap for URP Lit  _MainTex for built in RP
+        _renderer.material.SetTexture("_BaseMap", _currentAnimation[i]);
     }
 }

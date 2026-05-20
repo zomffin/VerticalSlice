@@ -5159,9 +5159,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: _fps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 4050443177620622555}
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _playerStatus
       value: 
@@ -5169,6 +5177,10 @@ PrefabInstance:
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _moveMask.m_Bits
       value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: _idling.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _interactMask.m_Bits
@@ -5187,6 +5199,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+--- !u!23 &4050443177620622555 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4559214768567687483, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+  m_PrefabInstance: {fileID: 4050443177620622554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8319467605369297000
 PrefabInstance:
   m_ObjectHideFlags: 0
