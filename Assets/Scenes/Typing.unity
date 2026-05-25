@@ -1051,6 +1051,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c4b7588093b111d4093dde101dd84fb0, type: 3}
   - {fileID: 8300000, guid: b78e99f7d0b6a014089fcf511882dc7c, type: 3}
   - {fileID: 8300000, guid: 421da74672d6b6943b3384a69a9b2c28, type: 3}
+  _gameOver: {fileID: 8300000, guid: 99c2cab337ad1b64984b053c8b0d019f, type: 3}
   _typing: {fileID: 105429487}
   _beginInterval: 60
   _maxInterval: 120
@@ -1620,7 +1621,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1.5
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -2494,7 +2495,7 @@ Transform:
   m_GameObject: {fileID: 505876554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.01, y: 0, z: 7.76}
+  m_LocalPosition: {x: 10.78, y: 0, z: 7.76}
   m_LocalScale: {x: 4.3028, y: 1, z: 3.985}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5198,7 +5199,7 @@ Transform:
   m_GameObject: {fileID: 1750959273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.2, y: -5.2, z: 9.2}
+  m_LocalPosition: {x: 19.2, y: -14.8, z: 9.2}
   m_LocalScale: {x: 2.885668, y: 1, z: 4.6142645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6013,7 +6014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3439334467802582733, guid: ceed133474e4f0b4bbcc5024f6b97c85, type: 3}
       propertyPath: m_Name
-      value: typewriter_editted_2
+      value: Typewriter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

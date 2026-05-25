@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource _typewriter; 
     
     [SerializeField] private AudioClip[] _typingClips;
+    [SerializeField] private AudioClip _gameOver; 
 
     [SerializeField] private Typing _typing;
 
