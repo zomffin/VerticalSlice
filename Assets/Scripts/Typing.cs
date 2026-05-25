@@ -36,6 +36,9 @@ public class Typing : MonoBehaviour
     private GameObject _gameManager;
     private GameObject _UIManager; 
     
+    public delegate void TypingDelegate();
+    public event TypingDelegate TypingEvent;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -101,6 +104,7 @@ public class Typing : MonoBehaviour
                 }
                 else if (_currInk > 0)
                 {
+                    TypingEvent?.Invoke();
 
                     if (_place < _taskPassage.Length && _taskPassage[_place] == c)
                     {
