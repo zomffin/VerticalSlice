@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask _moveMask;
     [SerializeField] private LayerMask _interactMask; 
     [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject _typingCam; 
 
     [Header("Animation Stuff")]
     [SerializeField] private List<Texture2D> _idling;
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         {
             _playerState = PlayerState.Moving;
             typingEvent?.Invoke(false);
+            _typingCam.SetActive(false);
             CustomEvent.Trigger(_gameManager, "typing", false);
             Debug.Log("went from typing to moving");
             return;
@@ -84,6 +86,7 @@ public class Player : MonoBehaviour
                 case "Type":
                         _playerState = PlayerState.Typing;
                         typingEvent?.Invoke(true);
+                        _typingCam.SetActive(true);
                         CustomEvent.Trigger(_gameManager, "typing", true);
                     break;
                 case "PickUp":
@@ -114,6 +117,7 @@ public class Player : MonoBehaviour
     {
         _playerState = PlayerState.Moving;
         typingEvent?.Invoke(false);
+        _typingCam.SetActive(false);
         CustomEvent.Trigger(_gameManager, "typing", false);
     }
 
