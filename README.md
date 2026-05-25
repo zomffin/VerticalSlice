@@ -53,3 +53,9 @@ Milestone 4 Devlog goes here.
 Final Devlog goes here.
 ## Open-source assets
 - [Typewriter Model](https://vertexcat.itch.io/typewriter-set), textures are by me
+
+### Audio
+- [Ambience](https://freesound.org/people/Littleboot/sounds/147300/)
+- [Music](https://pixabay.com/music/ambient-intense-horror-game-ambience-418842/)
+- [Typing Sounds](https://freesound.org/people/BryanSaraiva/packs/44114/)
+
