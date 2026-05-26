@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using Random = UnityEngine.Random;
@@ -6,6 +7,7 @@ using Random = UnityEngine.Random;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _camera;
+    [SerializeField] private AudioSource _camera2; 
     [SerializeField] private AudioSource _typewriter; 
     
     [SerializeField] private AudioClip[] _typingClips;
@@ -16,6 +18,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float _beginInterval;
     [SerializeField] private float _maxInterval;
     [SerializeField] private float _musicChance;
+    [SerializeField] private float _gameOverSpeed; 
 
     private float _musicTimer;
 
@@ -30,6 +33,7 @@ public class AudioManager : MonoBehaviour
         //_player = Locator.Instance.Player;
 
         _typing.TypingEvent += OnType; 
+        _camera2.Play();
     }
 
     // Update is called once per frame
@@ -86,4 +90,21 @@ public class AudioManager : MonoBehaviour
             _musicTimer += Time.deltaTime;
         }
     }
+
+    public IEnumerator GameOver()
+    {
+        Debug.Log("audio gameover triggered");
+        _camera2.volume = 0;
+        _camera2.resource = _gameOver;
+        _camera2.Play(); 
+        
+        while (_camera2.volume < 1)
+        {
+            _camera2.volume += _gameOverSpeed * Time.deltaTime;
+            Debug.Log("volume: " + _camera2.volume);
+            yield return null;
+        }
+        
+    }
+    
 }

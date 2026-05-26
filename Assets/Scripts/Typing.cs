@@ -71,7 +71,7 @@ public class Typing : MonoBehaviour
         
         if (Input.inputString.Length > 0)
         {
-            Debug.Log("index: " + _place);
+            //Debug.Log("index: " + _place);
             
             foreach (char c in Input.inputString)
             {
@@ -146,7 +146,7 @@ public class Typing : MonoBehaviour
         // put more complex check, shouldn't be a game over if there's no more delete unless theres a mistake ?
         if (_currDelete <= 0 || _currInk <= 0 || _currPaper <= 0 && _place < _taskPassage.Length)
         {
-            Debug.Log("something is less or equal to 0 ");
+            //Debug.Log("something is less or equal to 0 ");
             if (_currInk <= 0)
             {
                 CustomEvent.Trigger(_gameManager, "checkGameOver", 0);
