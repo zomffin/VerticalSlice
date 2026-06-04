@@ -120,7 +120,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.013757074, y: 0.663838, z: 0.99999994}
   m_Center: {x: -0.49312156, y: -0.16808082, z: 0}
@@ -141,7 +141,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.663838, z: 0.016925436}
   m_Center: {x: 0, y: -0.16808082, z: 0.49103218}
@@ -162,7 +162,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.019065639, y: 0.663838, z: 0.99999994}
   m_Center: {x: 0.49046728, y: -0.16808082, z: 0}
@@ -183,7 +183,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.663838, z: 0.019343816}
   m_Center: {x: 0, y: -0.16808082, z: -0.4903292}
@@ -204,7 +204,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.059448346, z: 0.99999994}
   m_Center: {x: 0, y: -0.4702756, z: 0}
@@ -227,5 +227,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.2716835, z: 0.99999994}
-  m_Center: {x: 0, y: -0.36415803, z: 0}
+  m_Size: {x: 0.9536452, y: 0.2716835, z: 0.9264607}
+  m_Center: {x: 0.0013263385, y: -0.36415803, z: 0.00060374563}
