@@ -6655,6 +6655,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
+      propertyPath: _minY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774435163498404831, guid: 9eb973bac9f02c149bdb4daeeff59a9f, type: 3}
       propertyPath: _camera
       value: 
       objectReference: {fileID: 330585545}

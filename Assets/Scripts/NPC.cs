@@ -25,7 +25,7 @@ public class NPC : MonoBehaviour
 
     private List<GameObject> _resources;
     private Vector3 _target;
-    private string _targetName;
+    private GameObject _targetObject;
     private GameObject _heldObject;
     //private bool _movingBack; 
     
@@ -54,7 +54,7 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("_state: " + _state);
+        //Debug.Log("_state: " + _state);
         switch (_state)
         {
             case NPCState.Getting:
@@ -76,7 +76,7 @@ public class NPC : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == _targetName)
+        if (other.gameObject == _heldObject)
         {
             _target = _startLocation; 
             _state = NPCState.Returning;
@@ -87,8 +87,10 @@ public class NPC : MonoBehaviour
     {
         if (!_heldObject)
         {
-            NewTarget();
             _state = NPCState.Getting;
+            NewTarget();
+            //Debug.Log("when held object deleted (mobing back)");
+            return;
         }
         
         transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
@@ -98,6 +100,7 @@ public class NPC : MonoBehaviour
         {
             _state = NPCState.Getting;
             NewTarget(); 
+           // Debug.Log("got back, switching targets (moving back) ");
         } 
     }
 
@@ -106,6 +109,7 @@ public class NPC : MonoBehaviour
         if (_heldObject == null)
         {
             NewTarget(); 
+           // Debug.Log("held object was null (Getting Item) ");
         }
         
         _target = _heldObject.transform.position;
@@ -140,7 +144,7 @@ public class NPC : MonoBehaviour
         }
         
         _target = _resources[index].transform.position;
-        _targetName = _resources[index].name; 
+        //_targetObject = _resources[index].gameObject; 
         _heldObject = _resources[index];
     }
 
