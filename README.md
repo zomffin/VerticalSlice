@@ -54,16 +54,20 @@ I used this article as reference to "animate" the static: [Medium Article](https
 3. The main bit of new gameplay content is that the game now gets "harder" as rounds go by. First off, more of the "npcs" will spawn in as time passes, meaning you have to compete against more of them during the resource phase. You also start getting more tasks per round as you go along (currently there's no cap). I also implemented some audio, so there's a bit more atmosphere now. There's typing noises (but none for deleting or ejecting a page yet), some quiet noise, a song that will randomly play (I wanted to do something similar to minecraft where music only plays randomly- it won't play for the first minute but after that it has a random chance of triggering... except it triggers like instantly so I think my code is messed up), and some radio/white noise for game overs. 
 
 ## Final Devlog
-**1. Core Gameplay Loop and Content, Vertical Slice**
+### 1. Core Gameplay Loop and Content, Vertical Slice
 The core gameplay loop and content is the back and forth between typing tasks and collecting resources. The current goal is just to survive as long as possible by making as few errors as possible, and collecting as much resources as possible. There are 10+ different tasks and 3 different resources to manage, as well as a unique "tutorial" set of tasks that don't reappear in later gameplay. 
+
 This slice illustrates the main gamne design and gameplay loop without actual story/puzzle progression. The full game would have a story, more tasks, and hopefully more complex tasks with small puzzles associated with them. I suppose in a way it's not exactly a vertical slice as there isn't much "horizontally" I imagine for this game, but instead deeper mechanics that build on what I already have so far. 
 
 
-**2. Renderring Effect** 
+
+### 2. Renderring Effect
 The renderring effect is activated when the player dies. First, it checks if a gameover is confirmed. In code, the typing script detects when a resource is depleted and activates a custom event in the state machine graph, which checks if there is more than 1 task remaining. This is mainly for an edge case if, somehow, the player runs out of materials just upon completing a task (Ex. running out of ink on the last character of a task), in which they should be allowed to go back for more resources and survive for a bit longer. Once this case is checked, then the renderring effect is triggered. A coroutine is started that increases the T value of a lerp node until it hits 4.0. At 4.0 it basically completely blacks out the screen, except for just a slight bit of noise in the center (which I don't mind). Then the proper gameover screen is displayed with the player stats. 
 * add screenshot of graph here
 
-**3. Planning** 
+
+
+### 3. Planning
 
 1. I don't really like the bubble diagrams, but I do like the task step break-downs.
 
