@@ -63,7 +63,10 @@ This slice illustrates the main gamne design and gameplay loop without actual st
 
 ### 2. Renderring Effect
 The renderring effect is activated when the player dies. First, it checks if a gameover is confirmed. In code, the typing script detects when a resource is depleted and activates a custom event in the state machine graph, which checks if there is more than 1 task remaining. This is mainly for an edge case if, somehow, the player runs out of materials just upon completing a task (Ex. running out of ink on the last character of a task), in which they should be allowed to go back for more resources and survive for a bit longer. Once this case is checked, then the renderring effect is triggered. A coroutine is started that increases the T value of a lerp node until it hits 4.0. At 4.0 it basically completely blacks out the screen, except for just a slight bit of noise in the center (which I don't mind). Then the proper gameover screen is displayed with the player stats. 
-* add screenshot of graph here
+
+Image of the graph that activates/changes the T value of the shader. 
+<img width="1939" height="791" alt="image" src="https://github.com/user-attachments/assets/b8e9bafd-1908-440e-90be-36fc9c87bc56" />
+
 
 
 
