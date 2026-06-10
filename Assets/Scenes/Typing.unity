@@ -1168,7 +1168,7 @@ MonoBehaviour:
     - {fileID: 989449344}
     - {fileID: 19194882}
     - {fileID: 83177264}
-    - {fileID: 8066359953500954500, guid: beca61c7105c98845bf4c454e2d58d26, type: 3}
+    - {fileID: 3841250605212248154, guid: 2b916e8554f3d08408e73be49f77b548, type: 3}
     - {fileID: 1865062090012487149, guid: 1361613bc974947459d701d5fdd0c668, type: 3}
     - {fileID: 285077780}
     - {fileID: 601224740}
@@ -6440,6 +6440,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1119404595520054931, guid: 1c2aa858fbbee2f468ec568a12d1efd4, type: 3}
+      propertyPath: _ink
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 1119404595520054931, guid: 1c2aa858fbbee2f468ec568a12d1efd4, type: 3}
       propertyPath: _typing
       value: 
