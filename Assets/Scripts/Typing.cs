@@ -92,6 +92,7 @@ public class Typing : MonoBehaviour
                             _paper.text = _currentPassage;
                             _currCorrect--; 
                         }
+                        TypingEvent?.Invoke();
 
                         _place--; 
                         _currDelete--; 
